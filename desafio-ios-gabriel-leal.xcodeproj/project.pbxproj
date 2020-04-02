@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		945C594C24369CA100FAECE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C594B24369CA100FAECE5 /* AppDelegate.swift */; };
+		945C594E24369CA100FAECE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C594D24369CA100FAECE5 /* SceneDelegate.swift */; };
+		945C595024369CA100FAECE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C594F24369CA100FAECE5 /* ViewController.swift */; };
+		945C595324369CA100FAECE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945C595124369CA100FAECE5 /* Main.storyboard */; };
+		945C595524369CA400FAECE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945C595424369CA400FAECE5 /* Assets.xcassets */; };
+		945C595824369CA400FAECE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945C595624369CA400FAECE5 /* LaunchScreen.storyboard */; };
+		945C596324369CA400FAECE5 /* desafio_ios_gabriel_lealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C596224369CA400FAECE5 /* desafio_ios_gabriel_lealTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		945C595F24369CA400FAECE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 945C594024369CA100FAECE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 945C594724369CA100FAECE5;
+			remoteInfo = "desafio-ios-gabriel-leal";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		945C594824369CA100FAECE5 /* desafio-ios-gabriel-leal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-ios-gabriel-leal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		945C594B24369CA100FAECE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		945C594D24369CA100FAECE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		945C594F24369CA100FAECE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		945C595224369CA100FAECE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		945C595424369CA400FAECE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		945C595724369CA400FAECE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		945C595924369CA400FAECE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		945C595E24369CA400FAECE5 /* desafio-ios-gabriel-lealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-ios-gabriel-lealTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		945C596224369CA400FAECE5 /* desafio_ios_gabriel_lealTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_ios_gabriel_lealTests.swift; sourceTree = "<group>"; };
+		945C596424369CA400FAECE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		945C594524369CA100FAECE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945C595B24369CA400FAECE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		945C593F24369CA100FAECE5 = {
+			isa = PBXGroup;
+			children = (
+				945C594A24369CA100FAECE5 /* desafio-ios-gabriel-leal */,
+				945C596124369CA400FAECE5 /* desafio-ios-gabriel-lealTests */,
+				945C594924369CA100FAECE5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		945C594924369CA100FAECE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				945C594824369CA100FAECE5 /* desafio-ios-gabriel-leal.app */,
+				945C595E24369CA400FAECE5 /* desafio-ios-gabriel-lealTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		945C594A24369CA100FAECE5 /* desafio-ios-gabriel-leal */ = {
+			isa = PBXGroup;
+			children = (
+				945C594B24369CA100FAECE5 /* AppDelegate.swift */,
+				945C594D24369CA100FAECE5 /* SceneDelegate.swift */,
+				945C594F24369CA100FAECE5 /* ViewController.swift */,
+				945C595124369CA100FAECE5 /* Main.storyboard */,
+				945C595424369CA400FAECE5 /* Assets.xcassets */,
+				945C595624369CA400FAECE5 /* LaunchScreen.storyboard */,
+				945C595924369CA400FAECE5 /* Info.plist */,
+			);
+			path = "desafio-ios-gabriel-leal";
+			sourceTree = "<group>";
+		};
+		945C596124369CA400FAECE5 /* desafio-ios-gabriel-lealTests */ = {
+			isa = PBXGroup;
+			children = (
+				945C596224369CA400FAECE5 /* desafio_ios_gabriel_lealTests.swift */,
+				945C596424369CA400FAECE5 /* Info.plist */,
+			);
+			path = "desafio-ios-gabriel-lealTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		945C594724369CA100FAECE5 /* desafio-ios-gabriel-leal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945C596724369CA400FAECE5 /* Build configuration list for PBXNativeTarget "desafio-ios-gabriel-leal" */;
+			buildPhases = (
+				945C594424369CA100FAECE5 /* Sources */,
+				945C594524369CA100FAECE5 /* Frameworks */,
+				945C594624369CA100FAECE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "desafio-ios-gabriel-leal";
+			productName = "desafio-ios-gabriel-leal";
+			productReference = 945C594824369CA100FAECE5 /* desafio-ios-gabriel-leal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		945C595D24369CA400FAECE5 /* desafio-ios-gabriel-lealTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945C596A24369CA400FAECE5 /* Build configuration list for PBXNativeTarget "desafio-ios-gabriel-lealTests" */;
+			buildPhases = (
+				945C595A24369CA400FAECE5 /* Sources */,
+				945C595B24369CA400FAECE5 /* Frameworks */,
+				945C595C24369CA400FAECE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				945C596024369CA400FAECE5 /* PBXTargetDependency */,
+			);
+			name = "desafio-ios-gabriel-lealTests";
+			productName = "desafio-ios-gabriel-lealTests";
+			productReference = 945C595E24369CA400FAECE5 /* desafio-ios-gabriel-lealTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		945C594024369CA100FAECE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Gabriel Sousa";
+				TargetAttributes = {
+					945C594724369CA100FAECE5 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					945C595D24369CA400FAECE5 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 945C594724369CA100FAECE5;
+					};
+				};
+			};
+			buildConfigurationList = 945C594324369CA100FAECE5 /* Build configuration list for PBXProject "desafio-ios-gabriel-leal" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 945C593F24369CA100FAECE5;
+			productRefGroup = 945C594924369CA100FAECE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				945C594724369CA100FAECE5 /* desafio-ios-gabriel-leal */,
+				945C595D24369CA400FAECE5 /* desafio-ios-gabriel-lealTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		945C594624369CA100FAECE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945C595824369CA400FAECE5 /* LaunchScreen.storyboard in Resources */,
+				945C595524369CA400FAECE5 /* Assets.xcassets in Resources */,
+				945C595324369CA100FAECE5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945C595C24369CA400FAECE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		945C594424369CA100FAECE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945C595024369CA100FAECE5 /* ViewController.swift in Sources */,
+				945C594C24369CA100FAECE5 /* AppDelegate.swift in Sources */,
+				945C594E24369CA100FAECE5 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945C595A24369CA400FAECE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945C596324369CA400FAECE5 /* desafio_ios_gabriel_lealTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		945C596024369CA400FAECE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 945C594724369CA100FAECE5 /* desafio-ios-gabriel-leal */;
+			targetProxy = 945C595F24369CA400FAECE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		945C595124369CA100FAECE5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				945C595224369CA100FAECE5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		945C595624369CA400FAECE5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				945C595724369CA400FAECE5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		945C596524369CA400FAECE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		945C596624369CA400FAECE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		945C596824369CA400FAECE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67ALGZ83W8;
+				INFOPLIST_FILE = "desafio-ios-gabriel-leal/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.desafio-ios-gabriel-leal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		945C596924369CA400FAECE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67ALGZ83W8;
+				INFOPLIST_FILE = "desafio-ios-gabriel-leal/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.desafio-ios-gabriel-leal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		945C596B24369CA400FAECE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67ALGZ83W8;
+				INFOPLIST_FILE = "desafio-ios-gabriel-lealTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.desafio-ios-gabriel-lealTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desafio-ios-gabriel-leal.app/desafio-ios-gabriel-leal";
+			};
+			name = Debug;
+		};
+		945C596C24369CA400FAECE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67ALGZ83W8;
+				INFOPLIST_FILE = "desafio-ios-gabriel-lealTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.desafio-ios-gabriel-lealTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desafio-ios-gabriel-leal.app/desafio-ios-gabriel-leal";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		945C594324369CA100FAECE5 /* Build configuration list for PBXProject "desafio-ios-gabriel-leal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945C596524369CA400FAECE5 /* Debug */,
+				945C596624369CA400FAECE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945C596724369CA400FAECE5 /* Build configuration list for PBXNativeTarget "desafio-ios-gabriel-leal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945C596824369CA400FAECE5 /* Debug */,
+				945C596924369CA400FAECE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945C596A24369CA400FAECE5 /* Build configuration list for PBXNativeTarget "desafio-ios-gabriel-lealTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945C596B24369CA400FAECE5 /* Debug */,
+				945C596C24369CA400FAECE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 945C594024369CA100FAECE5 /* Project object */;
+}
