@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8E6ED5970562EB5DE61A5B48 /* Pods_desafio_ios_gabriel_leal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B2C82DDFE7ABF1E39DCD7A /* Pods_desafio_ios_gabriel_leal.framework */; };
+		9417B9372437A0D300990886 /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417B9352437A0D300990886 /* CharacterListViewController.swift */; };
+		9417B9382437A0D300990886 /* CharacterListXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9417B9362437A0D300990886 /* CharacterListXib.xib */; };
+		9417B9402437A57600990886 /* CharacterListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417B93E2437A57600990886 /* CharacterListCollectionViewCell.swift */; };
+		9417B9412437A57600990886 /* CharacterListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9417B93F2437A57600990886 /* CharacterListCollectionViewCell.xib */; };
 		945C594C24369CA100FAECE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C594B24369CA100FAECE5 /* AppDelegate.swift */; };
 		945C594E24369CA100FAECE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C594D24369CA100FAECE5 /* SceneDelegate.swift */; };
-		945C595024369CA100FAECE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C594F24369CA100FAECE5 /* ViewController.swift */; };
-		945C595324369CA100FAECE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945C595124369CA100FAECE5 /* Main.storyboard */; };
 		945C595524369CA400FAECE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945C595424369CA400FAECE5 /* Assets.xcassets */; };
 		945C595824369CA400FAECE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945C595624369CA400FAECE5 /* LaunchScreen.storyboard */; };
 		945C596324369CA400FAECE5 /* desafio_ios_gabriel_lealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C596224369CA400FAECE5 /* desafio_ios_gabriel_lealTests.swift */; };
@@ -45,11 +47,13 @@
 		2CA693B4745A16DCC8B6111C /* Pods-desafio-ios-gabriel-lealTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-gabriel-lealTests.release.xcconfig"; path = "Target Support Files/Pods-desafio-ios-gabriel-lealTests/Pods-desafio-ios-gabriel-lealTests.release.xcconfig"; sourceTree = "<group>"; };
 		52B2C82DDFE7ABF1E39DCD7A /* Pods_desafio_ios_gabriel_leal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_ios_gabriel_leal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		931DF7059A8AA72438D195B7 /* Pods-desafio-ios-gabriel-leal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-gabriel-leal.release.xcconfig"; path = "Target Support Files/Pods-desafio-ios-gabriel-leal/Pods-desafio-ios-gabriel-leal.release.xcconfig"; sourceTree = "<group>"; };
+		9417B9352437A0D300990886 /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
+		9417B9362437A0D300990886 /* CharacterListXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterListXib.xib; sourceTree = "<group>"; };
+		9417B93E2437A57600990886 /* CharacterListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCollectionViewCell.swift; sourceTree = "<group>"; };
+		9417B93F2437A57600990886 /* CharacterListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterListCollectionViewCell.xib; sourceTree = "<group>"; };
 		945C594824369CA100FAECE5 /* desafio-ios-gabriel-leal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-ios-gabriel-leal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		945C594B24369CA100FAECE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		945C594D24369CA100FAECE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		945C594F24369CA100FAECE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		945C595224369CA100FAECE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		945C595424369CA400FAECE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		945C595724369CA400FAECE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		945C595924369CA400FAECE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +105,41 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9417B9322437A0B300990886 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				9417B9332437A0BD00990886 /* CharacterList */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		9417B9332437A0BD00990886 /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				9417B9342437A0C400990886 /* View */,
+			);
+			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		9417B9342437A0C400990886 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9417B9392437A4FF00990886 /* Cells */,
+				9417B9352437A0D300990886 /* CharacterListViewController.swift */,
+				9417B9362437A0D300990886 /* CharacterListXib.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9417B9392437A4FF00990886 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9417B93E2437A57600990886 /* CharacterListCollectionViewCell.swift */,
+				9417B93F2437A57600990886 /* CharacterListCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		945C593F24369CA100FAECE5 = {
 			isa = PBXGroup;
 			children = (
@@ -124,14 +163,13 @@
 		945C594A24369CA100FAECE5 /* desafio-ios-gabriel-leal */ = {
 			isa = PBXGroup;
 			children = (
+				9417B9322437A0B300990886 /* Feature */,
 				945C597F2436AAD300FAECE5 /* Models */,
 				945C597C2436A5F600FAECE5 /* Network */,
 				945C59762436A15000FAECE5 /* Commons */,
 				945C596D24369FE400FAECE5 /* Services */,
 				945C594B24369CA100FAECE5 /* AppDelegate.swift */,
 				945C594D24369CA100FAECE5 /* SceneDelegate.swift */,
-				945C594F24369CA100FAECE5 /* ViewController.swift */,
-				945C595124369CA100FAECE5 /* Main.storyboard */,
 				945C595424369CA400FAECE5 /* Assets.xcassets */,
 				945C595624369CA400FAECE5 /* LaunchScreen.storyboard */,
 				945C595924369CA400FAECE5 /* Info.plist */,
@@ -288,9 +326,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9417B9412437A57600990886 /* CharacterListCollectionViewCell.xib in Resources */,
 				945C595824369CA400FAECE5 /* LaunchScreen.storyboard in Resources */,
 				945C595524369CA400FAECE5 /* Assets.xcassets in Resources */,
-				945C595324369CA100FAECE5 /* Main.storyboard in Resources */,
+				9417B9382437A0D300990886 /* CharacterListXib.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,10 +412,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				945C59712436A0D600FAECE5 /* ApiManager.swift in Sources */,
-				945C595024369CA100FAECE5 /* ViewController.swift in Sources */,
+				9417B9402437A57600990886 /* CharacterListCollectionViewCell.swift in Sources */,
 				945C594C24369CA100FAECE5 /* AppDelegate.swift in Sources */,
 				945C599024375CD600FAECE5 /* URL.swift in Sources */,
 				945C59752436A0F600FAECE5 /* ServicesProtocol.swift in Sources */,
+				9417B9372437A0D300990886 /* CharacterListViewController.swift in Sources */,
 				945C596F24369FF100FAECE5 /* APIKeys.swift in Sources */,
 				945C598A24375C6100FAECE5 /* Comics.swift in Sources */,
 				945C598E24375CC400FAECE5 /* Thumbnail.swift in Sources */,
@@ -408,14 +448,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		945C595124369CA100FAECE5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				945C595224369CA100FAECE5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		945C595624369CA400FAECE5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

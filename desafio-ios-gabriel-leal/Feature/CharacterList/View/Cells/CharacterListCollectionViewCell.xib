@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterListCollectionViewCell" id="gTV-IL-0wX" customClass="CharacterListCollectionViewCell" customModule="desafio_ios_gabriel_leal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjy-bg-u4I">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jyR-zB-4bx">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardMoldura" translatesAutoresizingMaskIntoConstraints="NO" id="HU1-W3-B5B" userLabel="deg">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHO-zk-yPs">
+                                <rect key="frame" x="0.0" y="128" width="160" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="F0i-2f-pfO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.88686144410000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jyR-zB-4bx" secondAttribute="trailing" id="043-ER-tJr"/>
+                            <constraint firstItem="jyR-zB-4bx" firstAttribute="top" secondItem="sjy-bg-u4I" secondAttribute="top" id="6hL-sv-Uxq"/>
+                            <constraint firstAttribute="bottom" secondItem="HU1-W3-B5B" secondAttribute="bottom" id="8ek-ky-8vb"/>
+                            <constraint firstAttribute="bottom" secondItem="pHO-zk-yPs" secondAttribute="bottom" id="AKh-DU-dmR"/>
+                            <constraint firstItem="jyR-zB-4bx" firstAttribute="leading" secondItem="sjy-bg-u4I" secondAttribute="leading" id="HOz-F8-KH0"/>
+                            <constraint firstItem="HU1-W3-B5B" firstAttribute="top" secondItem="sjy-bg-u4I" secondAttribute="top" id="LN4-wr-MnH"/>
+                            <constraint firstItem="jyR-zB-4bx" firstAttribute="top" secondItem="sjy-bg-u4I" secondAttribute="top" id="O0U-SD-7dU"/>
+                            <constraint firstAttribute="trailing" secondItem="pHO-zk-yPs" secondAttribute="trailing" id="ObM-ZR-kx2"/>
+                            <constraint firstAttribute="trailing" secondItem="HU1-W3-B5B" secondAttribute="trailing" id="TKn-lW-w9N"/>
+                            <constraint firstItem="pHO-zk-yPs" firstAttribute="leading" secondItem="sjy-bg-u4I" secondAttribute="leading" id="VLt-8L-dZI"/>
+                            <constraint firstItem="HU1-W3-B5B" firstAttribute="leading" secondItem="sjy-bg-u4I" secondAttribute="leading" id="Vd1-LP-CKf"/>
+                            <constraint firstAttribute="bottom" secondItem="jyR-zB-4bx" secondAttribute="bottom" id="WNc-WO-V5H"/>
+                            <constraint firstAttribute="trailing" secondItem="HU1-W3-B5B" secondAttribute="trailing" id="Ws4-8g-bsk"/>
+                            <constraint firstAttribute="bottom" secondItem="HU1-W3-B5B" secondAttribute="bottom" id="Wsc-fw-Ujh"/>
+                            <constraint firstAttribute="bottom" secondItem="jyR-zB-4bx" secondAttribute="bottom" id="eh0-M7-R3M"/>
+                            <constraint firstItem="HU1-W3-B5B" firstAttribute="top" secondItem="sjy-bg-u4I" secondAttribute="top" id="l4P-HZ-2Sw"/>
+                            <constraint firstItem="jyR-zB-4bx" firstAttribute="leading" secondItem="sjy-bg-u4I" secondAttribute="leading" id="rfa-Ag-ZZv"/>
+                            <constraint firstAttribute="trailing" secondItem="jyR-zB-4bx" secondAttribute="trailing" id="spi-HR-Nba"/>
+                            <constraint firstItem="HU1-W3-B5B" firstAttribute="leading" secondItem="sjy-bg-u4I" secondAttribute="leading" id="tIc-kp-IOl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="sjy-bg-u4I" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FDV-en-Blb"/>
+                <constraint firstItem="sjy-bg-u4I" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="g0V-bF-lCh"/>
+                <constraint firstAttribute="bottom" secondItem="sjy-bg-u4I" secondAttribute="bottom" id="p0w-j4-3wW"/>
+                <constraint firstAttribute="trailing" secondItem="sjy-bg-u4I" secondAttribute="trailing" id="zDH-kX-9tb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="imageView" destination="jyR-zB-4bx" id="Gmt-CL-Kta"/>
+                <outlet property="nameLabel" destination="pHO-zk-yPs" id="N3y-Sg-b6F"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cardMoldura" width="160" height="200"/>
+    </resources>
+</document>
