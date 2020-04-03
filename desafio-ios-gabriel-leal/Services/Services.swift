@@ -6,7 +6,9 @@
 //  Copyright © 2020 Gabriel Sousa. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import Alamofire
+import AlamofireImage
 
 final class Services: ServicesProtocol {
     
@@ -20,6 +22,20 @@ final class Services: ServicesProtocol {
         })
     }
     
+    func getImage(path: String, completion: @escaping(UIImage) -> ()){
+        Alamofire.request(path).responseImage { (response) in
+            if let result = response.result.value {
+                completion(result)
+            } else {
+                completion(UIImage(named: "posterNaoEncontrado") ?? UIImage())
+            }
+        }
+    }
+    
+    
+}
+
+extension Services {
     private func unwrapCharacters(data: Data) -> [Character] {
         do {
             let decoder = JSONDecoder()

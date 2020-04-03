@@ -10,9 +10,23 @@ import Foundation
 
 class CharacterListViewModel {
     
-    var reload: (() -> Void)?
+    //****************************************************************
+    //MARK: Private Properties
+    //****************************************************************
     
     private let service: ServicesProtocol
+    
+    //****************************************************************
+    //MARK: Public Properties
+    //****************************************************************
+    
+    var reload: (() -> Void)?
+    
+    var showError: (() -> Void)?
+    
+    var charactersCount: Int {
+        return model.count
+    }
     
     var model: [Character] = [] {
         didSet {
@@ -22,21 +36,24 @@ class CharacterListViewModel {
         }
     }
     
+    //****************************************************************
+    //MARK: Life Cicle
+    //****************************************************************
     
     init(service: ServicesProtocol) {
         self.service = service
         fetchCharacterList()
     }
     
-    func fetchCharacterList() {
+    //****************************************************************
+    //MARK: Private Methods
+    //****************************************************************
+    
+    private func fetchCharacterList() {
         service.getCharacters(offset: 0, success: { characters in
             self.model += characters
         }, failure: { error in
-            print(error)
+            self.showError?()
         })
-    }
-    
-    var charactersCount: Int {
-        return model.count
     }
 }

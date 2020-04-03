@@ -25,6 +25,7 @@ class CharacterListCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        imageView.image = nil
     }
     
     //****************************************************************
@@ -41,6 +42,11 @@ class CharacterListCollectionViewCell: UICollectionViewCell {
     //****************************************************************
     
     private func config() {
-        self.nameLabel.text = viewModel.characterName
+        nameLabel.text = viewModel.characterName
+        viewModel.fetchImage { image in
+            DispatchQueue.main.async {
+                self.imageView.image = image
+            }
+        }
     }
 }

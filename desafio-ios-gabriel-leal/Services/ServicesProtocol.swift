@@ -6,8 +6,9 @@
 //  Copyright © 2020 Gabriel Sousa. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol ServicesProtocol: class {
     func getCharacters(offset: Int, success: @escaping ([Character]) -> Void, failure: @escaping (Error) -> Void)
+    func getImage(path: String, completion: @escaping(UIImage) -> ())
 }

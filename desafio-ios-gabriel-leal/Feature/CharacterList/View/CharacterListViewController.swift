@@ -75,7 +75,7 @@ extension CharacterListViewController: UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterListCollectionViewCell", for: indexPath) as! CharacterListCollectionViewCell
         let index = indexPath.row
         let character = viewModel.model[index]
-        let viewModel = CharacterListCellViewModel(model: character)
+        let viewModel = CharacterListCellViewModel(model: character, service: Services())
         cell.setupViewModel(viewModel: viewModel)
         return cell
     }

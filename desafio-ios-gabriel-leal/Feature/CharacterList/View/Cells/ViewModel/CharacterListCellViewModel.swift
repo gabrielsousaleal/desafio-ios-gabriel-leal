@@ -6,7 +6,7 @@
 //  Copyright © 2020 Gabriel Sousa. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class CharacterListCellViewModel {
     
@@ -15,13 +15,15 @@ class CharacterListCellViewModel {
     //****************************************************************
     
     private var model: Character
+    private var service: ServicesProtocol
     
     //****************************************************************
     //MARK: Life Cicle
     //****************************************************************
     
-    init(model: Character) {
+    init(model: Character, service: ServicesProtocol) {
         self.model = model
+        self.service = service
     }
     
     //****************************************************************
@@ -32,4 +34,15 @@ class CharacterListCellViewModel {
         return model.name
     }
     
+    func fetchImage(completion: @escaping(UIImage) -> Void) {
+        let path = makeImagePath()
+        service.getImage(path: path, completion: { result in
+           completion(result)
+        })
+    }
+    
+    private func makeImagePath() -> String {
+        let path = model.thumbnail.path + "/" + StaticStrings.kLargeImageExtension + "." + model.thumbnail.thumbnailExtension.rawValue
+        return path
+    }
 }
