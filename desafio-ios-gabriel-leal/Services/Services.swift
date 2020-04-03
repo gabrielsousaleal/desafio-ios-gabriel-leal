@@ -10,16 +10,14 @@ import Foundation
 
 final class Services: ServicesProtocol {
     
-    func get(offset: Int = 0, success: @escaping ([Character]) -> Void, error: @escaping (NSError) -> Void) {
+    func getCharacters(offset: Int = 0, success: @escaping ([Character]) -> Void, failure: @escaping (Error) -> Void) {
         let params = ApiKeys.getCharactersParams(offset: offset)
-        ApiManager().getFrom(StaticStrings.kCharactersMethod, params: params) { (response) in
-            if let data = response as? Data {
-                let characters = self.unwrapCharacters(data: data)
-                success(characters)
-            } else {
-                error(NSError(domain: "", code: -1, userInfo: nil))
-            }
-        }
+        ApiManager().getFrom(StaticStrings.kCharactersMethod, params: params, success: { data in
+            let characters = self.unwrapCharacters(data: data)
+            success(characters)
+        }, failure: { error in
+            failure(error)
+        })
     }
     
     func unwrapCharacters(data: Data) -> [Character] {
@@ -32,6 +30,6 @@ final class Services: ServicesProtocol {
         } catch {
             print(error)
         }
-         return []
+        return []
     }
 }

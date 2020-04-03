@@ -21,18 +21,20 @@ class ApiManager {
     // MARK: Public Methods
     //****************************************************************
     
-    func getFrom(_ method: String, params: [String: Any]? = nil, completion: @escaping(Any?) -> Void) {
+    func getFrom(_ method: String, params: [String: Any]? = nil, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void) {
+        
         Alamofire.request(ApiEndpoint + method, method: .get, parameters: params)
             .validate()
-            .responseData { (response) in
-                switch response.result {
-                case .success:
-                    completion(response.data!)
-                    break
-                case .failure(let error):
-                    completion(error)
-                    break
+            .response(completionHandler: { response in
+                if let data = response.data, response.error == nil {
+                    success(data)
                 }
-        }
+                
+                if let _ = response.error {
+                    let errorCode = response.response?.statusCode ?? 404
+                    let apiError = NSError(domain: "", code: errorCode, userInfo: nil)
+                    failure(apiError)
+                }
+            })
     }
 }

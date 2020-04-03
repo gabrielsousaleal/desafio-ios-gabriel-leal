@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         
         let offset = 20
         
-        service.get(offset: offset, success: { characters in
+        service.getCharacters(offset: offset, success: { characters in
             print(characters.first?.name)
         }) { error in
             print(error)
