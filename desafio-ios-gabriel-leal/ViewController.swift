@@ -12,7 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let service = Services()
+        
+        let offset = 20
+        
+        service.get(offset: offset, success: { characters in
+            print(characters.first?.name)
+        }) { error in
+            print(error)
+        }
+        
     }
 
 
