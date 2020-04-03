@@ -8,6 +8,6 @@
 
 import Foundation
 
-class ServicesProtocol: NSObject {
-    
+protocol ServicesProtocol: class {
+    func getCharacters(offset: Int, success: @escaping ([Character]) -> Void, failure: @escaping (Error) -> Void)
 }

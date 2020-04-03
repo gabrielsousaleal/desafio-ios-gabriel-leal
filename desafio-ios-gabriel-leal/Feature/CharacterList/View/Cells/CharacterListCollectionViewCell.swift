@@ -9,13 +9,38 @@
 import UIKit
 
 class CharacterListCollectionViewCell: UICollectionViewCell {
-
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var nameLabel: UILabel!
+    
+    //****************************************************************
+    //MARK: Private Properties
+    //****************************************************************
+    
+    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var nameLabel: UILabel!
+    
+    private var viewModel: CharacterListCellViewModel!
+    
+    //****************************************************************
+    //MARK: Life Cicle
+    //****************************************************************
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
+    //****************************************************************
+    //MARK: Public Methods
+    //****************************************************************
+    
+    func setupViewModel(viewModel: CharacterListCellViewModel) {
+        self.viewModel = viewModel
+        config()
+    }
+    
+    //****************************************************************
+    //MARK: Private Methods
+    //****************************************************************
+    
+    private func config() {
+        self.nameLabel.text = viewModel.characterName
+    }
 }

@@ -15,6 +15,7 @@ class CharacterListViewController: UIViewController {
     //****************************************************************
     
     @IBOutlet private var collectionView: UICollectionView!
+    private var viewModel: CharacterListViewModel! = nil
     
     //****************************************************************
     // MARK: Life Cycle
@@ -24,9 +25,8 @@ class CharacterListViewController: UIViewController {
         super.viewDidLoad()
         setDelegates()
         setCollectionViewCellsLayout()
-        let nib = UINib(nibName: "CharacterListCollectionViewCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "CharacterListCollectionViewCell")
-        // Do any additional setup after loading the view.
+        registerNibs()
+        setupViewModel()
     }
     
     //****************************************************************
@@ -47,19 +47,38 @@ class CharacterListViewController: UIViewController {
         layout.minimumLineSpacing = 10
         collectionView.collectionViewLayout = layout
     }
+    
+    private func registerNibs() {
+        let nib = UINib(nibName: "CharacterListCollectionViewCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "CharacterListCollectionViewCell")
+    }
+    
+    private func setupViewModel() {
+        viewModel = CharacterListViewModel(service: Services())
+        
+        viewModel.reload = {
+            self.collectionView.reloadData()
+        }
+    }
 }
+
+//****************************************************************
+//MARK: Collection VIEW DATA SOURCE
+//****************************************************************
 
 extension CharacterListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return viewModel.charactersCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterListCollectionViewCell", for: indexPath) as! CharacterListCollectionViewCell
+        let index = indexPath.row
+        let character = viewModel.model[index]
+        let viewModel = CharacterListCellViewModel(model: character)
+        cell.setupViewModel(viewModel: viewModel)
         return cell
     }
-    
-    
 }
 
 

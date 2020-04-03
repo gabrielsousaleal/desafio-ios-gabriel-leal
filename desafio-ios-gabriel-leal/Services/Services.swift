@@ -20,7 +20,7 @@ final class Services: ServicesProtocol {
         })
     }
     
-    func unwrapCharacters(data: Data) -> [Character] {
+    private func unwrapCharacters(data: Data) -> [Character] {
         do {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
