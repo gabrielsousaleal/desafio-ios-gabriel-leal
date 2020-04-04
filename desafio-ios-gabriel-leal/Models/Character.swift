@@ -10,16 +10,16 @@ import Foundation
 
 // MARK: - Character
 struct CharactersResult: Decodable {
-    let code: Int
-    let status, copyright, attributionText, attributionHTML: String
-    let etag: String
-    let data: CharactersDataClass
+    let code: Int?
+    let status, copyright, attributionText, attributionHTML: String?
+    let etag: String?
+    let data: CharactersDataClass?
 }
 
 // MARK: - DataClass
 struct CharactersDataClass: Decodable {
-    let offset, limit, total, count: Int
-    let characters: [Character]
+    let offset, limit, total, count: Int?
+    let characters: [Character]?
     
     private enum CodingKeys: String, CodingKey {
         case offset = "offset"
@@ -32,15 +32,15 @@ struct CharactersDataClass: Decodable {
 
 // MARK: - Result
 struct Character: Decodable {
-    let id: Int
-    let name, resultDescription: String
-    let modified: Date
-    let thumbnail: Thumbnail
-    let resourceURI: String
-    let comics, series: Comics
-    let stories: Stories
-    let events: Comics
-    let urls: [URLElement]
+    let id: Int?
+    let name, resultDescription: String?
+    let modified: Date?
+    let thumbnail: Thumbnail?
+    let resourceURI: String?
+    let comics, series: Comics?
+    let stories: Stories?
+    let events: Comics?
+    let urls: [URLElement]?
 
     enum CodingKeys: String, CodingKey {
         case id, name

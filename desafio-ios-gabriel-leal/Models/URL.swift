@@ -10,8 +10,8 @@ import Foundation
 
 // MARK: - URLElement
 struct URLElement: Decodable {
-    let type: URLType
-    let url: String
+    let type: String?
+    let url: String?
 }
 
  enum URLType: String, Decodable {

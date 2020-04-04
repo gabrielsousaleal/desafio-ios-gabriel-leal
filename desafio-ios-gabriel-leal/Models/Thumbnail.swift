@@ -10,8 +10,8 @@ import Foundation
 
 // MARK: - Thumbnail
 struct Thumbnail: Decodable {
-    let path: String
-    let thumbnailExtension: Extension
+    let path: String?
+    let thumbnailExtension: String?
 
     enum CodingKeys: String, CodingKey {
         case path

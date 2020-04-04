@@ -10,14 +10,14 @@ import Foundation
 
 // MARK: - Comics
 struct Comics: Decodable {
-    let available: Int
-    let collectionURI: String
-    let items: [ComicsItem]
-    let returned: Int
+    let available: Int?
+    let collectionURI: String?
+    let items: [ComicsItem]?
+    let returned: Int?
 }
 
 // MARK: - ComicsItem
 struct ComicsItem: Decodable {
-    let resourceURI: String
-    let name: String
+    let resourceURI: String?
+    let name: String?
 }

@@ -9,7 +9,9 @@
 import Foundation
 
 extension String {
-    func empty() -> String {
-        return ""
+    var empty: String {
+        get {
+           return ""
+        }
     }
 }

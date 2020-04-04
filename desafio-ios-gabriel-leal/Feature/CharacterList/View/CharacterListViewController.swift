@@ -79,6 +79,12 @@ extension CharacterListViewController: UICollectionViewDelegate, UICollectionVie
         cell.setupViewModel(viewModel: viewModel)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.charactersCount - 1 {
+            viewModel.fetchNextPage()
+        }
+    }
 }
 
 

@@ -15,6 +15,7 @@ class CharacterListViewModel {
     //****************************************************************
     
     private let service: ServicesProtocol
+    private var page = 0
     
     //****************************************************************
     //MARK: Public Properties
@@ -42,15 +43,25 @@ class CharacterListViewModel {
     
     init(service: ServicesProtocol) {
         self.service = service
-        fetchCharacterList()
+        fetchCharacterList(offset: 0)
+    }
+    
+    //****************************************************************
+    //MARK: Public Methods
+    //****************************************************************
+    
+    func fetchNextPage() {
+        page += 1
+        let offset = page * 20
+        fetchCharacterList(offset: offset)
     }
     
     //****************************************************************
     //MARK: Private Methods
     //****************************************************************
     
-    private func fetchCharacterList() {
-        service.getCharacters(offset: 0, success: { characters in
+    private func fetchCharacterList(offset: Int) {
+        service.getCharacters(offset: offset, success: { characters in
             self.model += characters
         }, failure: { error in
             self.showError?()

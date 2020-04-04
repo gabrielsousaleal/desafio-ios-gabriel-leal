@@ -41,7 +41,7 @@ extension Services {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             let result = try decoder.decode(CharactersResult.self, from: data)
-            let characters = result.data.characters
+            let characters = result.data!.characters!
             return characters
         } catch {
             print(error)
