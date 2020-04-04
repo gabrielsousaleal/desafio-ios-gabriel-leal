@@ -29,6 +29,10 @@ class CharacterListViewController: UIViewController {
         setupViewModel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     //****************************************************************
     // MARK: Private Methods
     //****************************************************************
@@ -42,7 +46,7 @@ class CharacterListViewController: UIViewController {
         let screen = UIScreen.main.bounds
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 8, bottom: 10, right: 8)
-        layout.itemSize = CGSize(width: screen.width/2.15, height: screen.height/2.65)
+        layout.itemSize = CGSize(width: screen.width/2.15, height: screen.height/3.0)
         layout.minimumInteritemSpacing = 1
         layout.minimumLineSpacing = 10
         collectionView.collectionViewLayout = layout

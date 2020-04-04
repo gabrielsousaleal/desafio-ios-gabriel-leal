@@ -42,6 +42,8 @@ class CharacterListCollectionViewCell: UICollectionViewCell {
     //****************************************************************
     
     private func config() {
+        layer.cornerRadius = 8
+        imageView.layer.cornerRadius = 8
         nameLabel.text = viewModel.characterName
         viewModel.fetchImage { image in
             DispatchQueue.main.async {

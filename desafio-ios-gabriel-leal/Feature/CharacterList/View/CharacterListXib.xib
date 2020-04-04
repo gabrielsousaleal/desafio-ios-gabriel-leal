@@ -19,8 +19,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4FO-yN-Y9X">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <rect key="frame" x="0.0" y="111" width="414" height="751"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TCT-cN-b1t">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -28,16 +28,38 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfC-UL-W7k">
+                    <rect key="frame" x="0.0" y="44" width="414" height="67"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="rjx-3A-dcd">
+                            <rect key="frame" x="125" y="0.0" width="165" height="67"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="rjx-3A-dcd" secondAttribute="trailing" constant="124" id="6Kz-oH-13Y"/>
+                        <constraint firstAttribute="height" constant="67" id="AvJ-eh-eOo"/>
+                        <constraint firstItem="rjx-3A-dcd" firstAttribute="leading" secondItem="xfC-UL-W7k" secondAttribute="leading" constant="125" id="DdX-O2-C0M"/>
+                        <constraint firstAttribute="bottom" secondItem="rjx-3A-dcd" secondAttribute="bottom" id="IAz-8a-2ng"/>
+                        <constraint firstItem="rjx-3A-dcd" firstAttribute="top" secondItem="xfC-UL-W7k" secondAttribute="top" id="RTM-yl-Bnz"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
-                <constraint firstItem="4FO-yN-Y9X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EyW-ho-vii"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4FO-yN-Y9X" secondAttribute="trailing" id="OUY-YH-KPn"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4FO-yN-Y9X" secondAttribute="bottom" id="ivX-aj-6gf"/>
-                <constraint firstItem="4FO-yN-Y9X" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nq7-Kq-cXU"/>
+                <constraint firstItem="4FO-yN-Y9X" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="9OZ-Qp-pqX"/>
+                <constraint firstItem="4FO-yN-Y9X" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="CuI-Kb-6An"/>
+                <constraint firstItem="4FO-yN-Y9X" firstAttribute="top" secondItem="xfC-UL-W7k" secondAttribute="bottom" id="MqV-gt-gSn"/>
+                <constraint firstItem="xfC-UL-W7k" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Sha-9j-Uxm"/>
+                <constraint firstItem="xfC-UL-W7k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eYe-FV-Q5e"/>
+                <constraint firstItem="4FO-yN-Y9X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="p2Q-IH-PZ1"/>
+                <constraint firstItem="xfC-UL-W7k" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zWy-eT-jVR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="124"/>
+            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
         </view>
     </objects>
+    <resources>
+        <image name="logo" width="1600" height="1136"/>
+    </resources>
 </document>
