@@ -18,6 +18,7 @@
 		9419AE5524395FB60029087E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419AE5424395FB60029087E /* Router.swift */; };
 		9419AE57243A240A0029087E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419AE56243A240A0029087E /* UINavigationControllerExtension.swift */; };
 		944C5422243A79FD0043AB7C /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 944C5421243A79FD0043AB7C /* loading.json */; };
+		944C5425243A82850043AB7C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C5424243A82850043AB7C /* UIImageExtension.swift */; };
 		945206C1243A4E42005EEA8D /* CharacterExpensiveComicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945206C0243A4E42005EEA8D /* CharacterExpensiveComicViewModel.swift */; };
 		945206C5243A66A0005EEA8D /* CharacterExpensiveComicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945206C3243A66A0005EEA8D /* CharacterExpensiveComicTableViewCell.swift */; };
 		945206C6243A66A0005EEA8D /* CharacterExpensiveComicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 945206C4243A66A0005EEA8D /* CharacterExpensiveComicCell.xib */; };
@@ -75,6 +76,7 @@
 		9419AE5424395FB60029087E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9419AE56243A240A0029087E /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		944C5421243A79FD0043AB7C /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		944C5424243A82850043AB7C /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		945206C0243A4E42005EEA8D /* CharacterExpensiveComicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterExpensiveComicViewModel.swift; sourceTree = "<group>"; };
 		945206C3243A66A0005EEA8D /* CharacterExpensiveComicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterExpensiveComicTableViewCell.swift; sourceTree = "<group>"; };
 		945206C4243A66A0005EEA8D /* CharacterExpensiveComicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterExpensiveComicCell.xib; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			children = (
 				945C597A2436A1A900FAECE5 /* StringExtension.swift */,
 				9419AE56243A240A0029087E /* UINavigationControllerExtension.swift */,
+				944C5424243A82850043AB7C /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				945C59782436A18F00FAECE5 /* StaticStrings.swift in Sources */,
 				945C597B2436A1A900FAECE5 /* StringExtension.swift in Sources */,
 				9419AE5024395CD00029087E /* CharacterDetailsViewModel.swift in Sources */,
+				944C5425243A82850043AB7C /* UIImageExtension.swift in Sources */,
 				949B98D7243A440D000E8E89 /* CharacterComics.swift in Sources */,
 				945C59812436AADF00FAECE5 /* Character.swift in Sources */,
 				949B98DA243A4748000E8E89 /* CharacterTableViewCellViewModel.swift in Sources */,

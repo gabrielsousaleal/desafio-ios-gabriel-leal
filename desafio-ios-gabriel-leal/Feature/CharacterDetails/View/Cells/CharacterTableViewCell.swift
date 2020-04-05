@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class CharacterTableViewCell: UITableViewCell {
     
@@ -22,6 +23,7 @@ class CharacterTableViewCell: UITableViewCell {
     private var id: String!
     private var characterName: String!
     private var navigationController: UINavigationController?
+    private var animationView: AnimationView?
     
     //****************************************************************
     //MARK: Life Cicle
@@ -51,7 +53,9 @@ class CharacterTableViewCell: UITableViewCell {
 
 extension CharacterTableViewCell {
     @IBAction func expensiveButtonAction(_ sender: Any) {
+        animationView = Router.showLoading(navigationController: navigationController)
         viewModel.getComics(success: { comics in
+            self.animationView?.removeFromSuperview()
             let viewModel = CharacterExpensiveComicViewModel(model: comics)
             if comics.count == 0 {
                 Router.showAlert(title: "Ops!", message: "Esse personagem não tem nenhuma HQ", navigationController: self.navigationController)
@@ -59,6 +63,7 @@ extension CharacterTableViewCell {
             }
             Router.pushCharacterExpensiveComicViewController(viewModel: viewModel, navigationController: self.navigationController)
         }, failure: { error in
+            self.animationView?.removeFromSuperview()
             print(error)
         })
     }

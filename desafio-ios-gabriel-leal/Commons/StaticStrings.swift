@@ -23,6 +23,7 @@ struct StaticStrings {
     static let kStandardFantasticImageExtension = "standard_fantastic"
     static let kStandardAmazingImageExtension = "standard_amazing"
     static let kLoadingAnimationName = "loading"
+    static let kLoadingImage = "loadingImage"
     
     static let kNoCharacterDescriptionFound = "Esse personagem não tem descrição"
     static let kBackButtonTitle = "Voltar"

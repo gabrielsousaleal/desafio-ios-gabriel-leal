@@ -19,6 +19,7 @@ class CharacterExpensiveComicTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        thumbImageView.image = UIImage.loadingCharacterImage()
     }
 
     func setupViewModel(model: CharacterComicsResult, service: ServicesProtocol) {
