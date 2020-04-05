@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class CharacterListViewController: UIViewController {
     
@@ -19,12 +20,15 @@ class CharacterListViewController: UIViewController {
     @IBOutlet var titleView: UIView!
     @IBOutlet var titleViewHeight: NSLayoutConstraint!
     @IBOutlet var titleViewTopConstraint: NSLayoutConstraint!
+    private var animationView: AnimationView?
+    
     //****************************************************************
     // MARK: Life Cycle
     //****************************************************************
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        animationView = Router.showLoading(navigationController: navigationController)
         setDelegates()
         setCollectionViewCellsLayout()
         registerNibs()
@@ -64,6 +68,7 @@ class CharacterListViewController: UIViewController {
         viewModel = CharacterListViewModel(service: Services())
         
         viewModel.reload = {
+            self.animationView?.removeFromSuperview()
             self.collectionView.reloadData()
         }
     }
