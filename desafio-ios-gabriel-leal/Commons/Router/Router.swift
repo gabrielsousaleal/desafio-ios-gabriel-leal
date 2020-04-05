@@ -34,16 +34,11 @@ class Router {
     
     static func showLoading(navigationController: UINavigationController?) -> AnimationView {
         let animationView = AnimationView(name: StaticStrings.kLoadingAnimationName)
-        animationView.frame = navigationController?.topViewController?.view.frame ?? CGRect(x: 0, y: 0, width: 0, height: 0)
-        animationView.center = navigationController?.topViewController?.view.center ?? CGPoint(x: 0, y: 0)
+        animationView.frame = UIScreen.main.bounds
         navigationController?.topViewController?.view.addSubview(animationView)
         animationView.loopMode = .loop
         animationView.play()
         
         return animationView
-    }
-    
-    static func dismissLoadint(animationView: AnimationView){
-        animationView.removeFromSuperview()
     }
 }
