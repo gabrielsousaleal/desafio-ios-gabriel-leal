@@ -10,6 +10,10 @@ import UIKit
 
 class CharacterExpensiveComicTableViewCell: UITableViewCell {
     
+    //****************************************************************
+    //MARK: Private Properties
+    //****************************************************************
+    
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
@@ -17,17 +21,29 @@ class CharacterExpensiveComicTableViewCell: UITableViewCell {
     
     private var viewModel: CharacterExpensiveCellViewModel! = nil
     
+    //****************************************************************
+    //MARK: Life Cicle
+    //****************************************************************
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         thumbImageView.image = UIImage.loadingCharacterImage()
     }
+    
+    //****************************************************************
+    //MARK: Public Methods
+    //****************************************************************
 
     func setupViewModel(model: CharacterComicsResult, service: ServicesProtocol) {
         viewModel = CharacterExpensiveCellViewModel(model: model, service: service)
         config()
     }
     
-    func config() {
+    //****************************************************************
+    //MARK: Private Methods
+    //****************************************************************
+    
+    private func config() {
         titleLabel.text = viewModel.title
         priceLabel.text = viewModel.price
         descriptionLabel.text = viewModel.description
