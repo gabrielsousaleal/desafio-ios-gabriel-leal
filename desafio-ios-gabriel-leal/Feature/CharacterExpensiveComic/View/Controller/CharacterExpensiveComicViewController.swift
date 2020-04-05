@@ -62,3 +62,13 @@ extension CharacterExpensiveComicViewController: UITableViewDelegate, UITableVie
         return cell
     }
 }
+
+//****************************************************************
+//MARK: StatusBar
+//****************************************************************
+
+extension CharacterExpensiveComicViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+             return .lightContent
+       }
+}

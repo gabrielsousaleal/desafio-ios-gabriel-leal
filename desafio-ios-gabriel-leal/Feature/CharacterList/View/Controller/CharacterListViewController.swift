@@ -134,3 +134,13 @@ extension CharacterListViewController: UICollectionViewDelegate, UICollectionVie
         }
     }
 }
+
+//****************************************************************
+//MARK: StatusBar
+//****************************************************************
+
+extension CharacterListViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+             return .lightContent
+       }
+}

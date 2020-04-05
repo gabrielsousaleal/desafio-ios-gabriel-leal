@@ -24,4 +24,8 @@ extension UINavigationController {
     func showNavBar() {
         isNavigationBarHidden = false
     }
+    
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+         return topViewController?.preferredStatusBarStyle ?? .default
+      }
 }
