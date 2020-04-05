@@ -43,9 +43,6 @@ class CharacterListViewModel {
     
     init(service: ServicesProtocol) {
         self.service = service
-        fetchCharacterList(offset: 0, failure: { error in
-            self.showError?(error)
-        })
     }
     
     //****************************************************************

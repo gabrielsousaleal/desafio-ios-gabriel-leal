@@ -14,7 +14,7 @@ class CharacterTableViewCell: UITableViewCell {
     //****************************************************************
     //MARK: Private Properties
     //****************************************************************
-
+    
     @IBOutlet var characterNameLabel: UILabel!
     @IBOutlet var characterDescriptionLabel: UILabel!
     @IBOutlet var expensiveButton: UIButton!
@@ -54,17 +54,21 @@ class CharacterTableViewCell: UITableViewCell {
 extension CharacterTableViewCell {
     @IBAction func expensiveButtonAction(_ sender: Any) {
         animationView = Router.showLoading(navigationController: navigationController)
-        viewModel.getComics(success: { comics in
-            self.animationView?.removeFromSuperview()
-            let viewModel = CharacterExpensiveComicViewModel(model: comics)
-            if comics.count == 0 {
-                Router.showAlert(title: "Ops!", message: "Esse personagem não tem nenhuma HQ", navigationController: self.navigationController)
-                return
-            }
-            Router.pushCharacterExpensiveComicViewController(viewModel: viewModel, navigationController: self.navigationController)
+        viewModel.getComics(
+            success: { comics in
+                self.animationView?.removeFromSuperview()
+                let viewModel = CharacterExpensiveComicViewModel(model: comics)
+                if comics.count == 0 {
+                    Router.showAlert(title: StaticStrings.kErrorTitle, message: "Esse personagem não tem nenhuma HQ", navigationController: self.navigationController)
+                    return
+                }
+                Router.pushCharacterExpensiveComicViewController(viewModel: viewModel, navigationController: self.navigationController)
         }, failure: { error in
             self.animationView?.removeFromSuperview()
-            print(error)
+            let alert = UIAlertAction(title: StaticStrings.kErrorTitle, style: .default) { _ in
+                self.navigationController?.popViewController(animated: true)
+            }
+            Router.showErrorAlert(title: StaticStrings.kErrorTitle, message: error.getDescription(), navigationController: self.navigationController, alertAction: alert)
         })
     }
 }

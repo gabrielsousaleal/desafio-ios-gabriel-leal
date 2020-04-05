@@ -65,6 +65,7 @@ class CharacterListViewController: UIViewController {
     
     private func setupViewModel() {
         animationView = Router.showLoading(navigationController: navigationController)
+        
         viewModel = CharacterListViewModel(service: Services())
         
         viewModel.reload = {
@@ -74,10 +75,14 @@ class CharacterListViewController: UIViewController {
         
         viewModel.showError = { error in
             self.animationView?.removeFromSuperview()
-            let action = UIAlertAction(title: "Tentar Novamente", style: .default) { _ in
+            let action = UIAlertAction(title: StaticStrings.kErrorButton, style: .default) { _ in
                 self.setupViewModel()
             }
-            Router.showErrorAlert(title: "Ops!", message: error.getDescription(), navigationController: self.navigationController, alertAction: action)
+            Router.showErrorAlert(title: StaticStrings.kErrorTitle, message: error.getDescription(), navigationController: self.navigationController, alertAction: action)
+        }
+        
+        viewModel.fetchCharacterList(offset: 0) { error in
+            self.viewModel.showError?(error)
         }
     }
     

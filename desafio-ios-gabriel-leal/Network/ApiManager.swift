@@ -22,6 +22,14 @@ class ApiManager {
     //****************************************************************
     
     func getFrom(_ method: String, params: [String: Any]? = nil, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void) {
+        
+        if !Internet.isConnectedToNetwork() {
+            let errorCode = 1009
+            let apiError = NSError(domain: String.empty, code: errorCode, userInfo: nil)
+            failure(apiError)
+            return
+        }
+        
         Alamofire.request(ApiEndpoint + method, method: .get, parameters: params)
             .validate()
             .response(completionHandler: { response in
