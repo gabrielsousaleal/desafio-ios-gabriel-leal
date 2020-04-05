@@ -10,6 +10,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterListViewController" customModule="desafio_ios_gabriel_leal" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="4FO-yN-Y9X" id="mkv-Fe-o6L"/>
+                <outlet property="titleView" destination="xfC-UL-W7k" id="a2j-oa-A0P"/>
+                <outlet property="titleViewHeight" destination="AvJ-eh-eOo" id="swF-ws-cPp"/>
+                <outlet property="titleViewTopConstraint" destination="zWy-eT-jVR" id="vNu-fg-gqe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -16,7 +16,10 @@ class CharacterListViewController: UIViewController {
     
     @IBOutlet private var collectionView: UICollectionView!
     private var viewModel: CharacterListViewModel! = nil
+    @IBOutlet var titleView: UIView!
     
+    @IBOutlet var titleViewHeight: NSLayoutConstraint!
+    @IBOutlet var titleViewTopConstraint: NSLayoutConstraint!
     //****************************************************************
     // MARK: Life Cycle
     //****************************************************************
@@ -64,6 +67,23 @@ class CharacterListViewController: UIViewController {
             self.collectionView.reloadData()
         }
     }
+    
+    private func runTitleUpAnimation() {
+        UIView.animate(withDuration: 0.5) {
+            self.titleView.alpha = 1
+            self.titleViewTopConstraint.constant = 0
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    private func runTitleDownAnimation() {
+       
+        UIView.animate(withDuration: 0.5) {
+            self.titleView.alpha = 0
+            self.titleViewTopConstraint.constant = -self.titleViewHeight.constant
+            self.view.layoutIfNeeded()
+        }
+    }
 }
 
 //****************************************************************
@@ -89,6 +109,16 @@ extension CharacterListViewController: UICollectionViewDelegate, UICollectionVie
             viewModel.fetchNextPage()
         }
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let pan = scrollView.panGestureRecognizer
+        let velocity = pan.velocity(in: collectionView).y
+        
+        if velocity < -5 {
+            runTitleDownAnimation()
+        } else if velocity > 5 {
+            runTitleUpAnimation()
+        }
+    }
 }
-
-

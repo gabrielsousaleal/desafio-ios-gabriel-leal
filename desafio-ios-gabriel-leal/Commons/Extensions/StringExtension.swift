@@ -9,9 +9,5 @@
 import Foundation
 
 extension String {
-    var empty: String {
-        get {
-           return ""
-        }
-    }
+    static let empty = String()
 }

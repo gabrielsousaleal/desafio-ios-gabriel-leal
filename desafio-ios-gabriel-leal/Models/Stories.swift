@@ -22,9 +22,3 @@ struct StoriesItem: Decodable {
     let name: String?
     let type: String?
 }
-
-enum ItemType: String, Decodable {
-    case cover = "cover"
-    case empty = ""
-    case interiorStory = "interiorStory"
-}

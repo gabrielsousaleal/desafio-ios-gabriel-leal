@@ -32,7 +32,7 @@ class ApiManager {
                 
                 if let _ = response.error {
                     let errorCode = response.response?.statusCode ?? 404
-                    let apiError = NSError(domain: "", code: errorCode, userInfo: nil)
+                    let apiError = NSError(domain: String.empty, code: errorCode, userInfo: nil)
                     failure(apiError)
                 }
             })

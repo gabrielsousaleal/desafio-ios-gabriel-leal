@@ -31,7 +31,7 @@ class CharacterListCellViewModel {
     //****************************************************************
     
     var characterName: String {
-        return model.name ?? ""
+        return model.name ?? String.empty
     }
     
     func fetchImage(completion: @escaping(UIImage) -> Void) {
@@ -42,7 +42,7 @@ class CharacterListCellViewModel {
     }
     
     private func makeImagePath() -> String {
-        guard let thumb: String = model.thumbnail?.path, let thumbExtension = model.thumbnail?.thumbnailExtension else { return "" }
+        guard let thumb: String = model.thumbnail?.path, let thumbExtension = model.thumbnail?.thumbnailExtension else { return String.empty }
         
          let path = thumb + "/" + StaticStrings.kLargeImageExtension + "." + thumbExtension
         return path
