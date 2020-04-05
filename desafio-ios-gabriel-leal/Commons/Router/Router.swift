@@ -14,4 +14,10 @@ class Router {
         vc.viewModel = viewModel
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    static func pushCharacterExpensiveComicViewController(viewModel: CharacterExpensiveComicViewModel, navigationController: UINavigationController?) {
+        let vc = CharacterExpensiveComicViewController(nibName: "CharacterExpensiveComicXib", bundle: Bundle.main)
+        vc.viewModel = viewModel
+        navigationController?.pushViewController(vc, animated: false)
+    }
 }

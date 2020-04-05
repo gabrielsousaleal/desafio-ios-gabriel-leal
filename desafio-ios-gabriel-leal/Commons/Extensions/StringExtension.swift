@@ -10,4 +10,8 @@ import Foundation
 
 extension String {
     static let empty = String()
+    
+    static func doubleToDollar(double: Double) -> String {
+        return "U$ \(double)"
+    }
 }

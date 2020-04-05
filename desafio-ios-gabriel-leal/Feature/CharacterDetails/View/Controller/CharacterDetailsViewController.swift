@@ -69,7 +69,7 @@ extension CharacterDetailsViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterTableViewCell", for: indexPath) as! CharacterTableViewCell
-        cell.config(characterDescription: viewModel.description, characterName: viewModel.name, id: viewModel.characterId, service: Services())
+        cell.config(characterDescription: viewModel.description, characterName: viewModel.name, id: viewModel.characterId, service: Services(), navigationController: navigationController)
         return cell
     }
 }

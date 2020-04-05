@@ -21,6 +21,7 @@ class CharacterTableViewCell: UITableViewCell {
     private var viewModel: CharacterTableViewCellViewModel!
     private var id: String!
     private var characterName: String!
+    private var navigationController: UINavigationController?
     
     //****************************************************************
     //MARK: Life Cicle
@@ -34,11 +35,12 @@ class CharacterTableViewCell: UITableViewCell {
     //MARK: Public Methods
     //****************************************************************
     
-    func config(characterDescription: String, characterName: String, id: String, service: ServicesProtocol) {
+    func config(characterDescription: String, characterName: String, id: String, service: ServicesProtocol, navigationController: UINavigationController?) {
         self.characterName = characterName
         self.id = id
         characterDescriptionLabel.text = characterDescription
         characterNameLabel.text = characterName
+        self.navigationController = navigationController
         viewModel = CharacterTableViewCellViewModel(id: id, service: service)
     }
 }
@@ -50,7 +52,8 @@ class CharacterTableViewCell: UITableViewCell {
 extension CharacterTableViewCell {
     @IBAction func expensiveButtonAction(_ sender: Any) {
         viewModel.getComics(success: { comics in
-            print(comics)
+            let viewModel = CharacterExpensiveComicViewModel(model: comics)
+            Router.pushCharacterExpensiveComicViewController(viewModel: viewModel, navigationController: self.navigationController)
         }, failure: { error in
             print(error)
         })
