@@ -23,7 +23,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
                 <constraint firstItem="N6u-Co-3eR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="C4L-UZ-DPP"/>
                 <constraint firstItem="N6u-Co-3eR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WPJ-uI-nCJ"/>

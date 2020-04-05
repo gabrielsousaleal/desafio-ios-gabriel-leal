@@ -29,7 +29,7 @@ class CharacterListViewController: UIViewController {
         setCollectionViewCellsLayout()
         registerNibs()
         setupViewModel()
-        configNavBar()
+        navigationController?.setNavBarTransparent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,13 +83,6 @@ class CharacterListViewController: UIViewController {
             self.titleViewTopConstraint.constant = -self.titleViewHeight.constant
             self.view.layoutIfNeeded()
         }
-    }
-    
-    private func configNavBar() {
-        navigationController?.navigationBar.tintColor = UIColor.red
-        let backItem = UIBarButtonItem()
-        backItem.title = StaticStrings.kBackButtonTitle
-        navigationItem.backBarButtonItem = backItem
     }
 }
 

@@ -18,6 +18,16 @@ class Router {
     static func pushCharacterExpensiveComicViewController(viewModel: CharacterExpensiveComicViewModel, navigationController: UINavigationController?) {
         let vc = CharacterExpensiveComicViewController(nibName: "CharacterExpensiveComicXib", bundle: Bundle.main)
         vc.viewModel = viewModel
-        navigationController?.pushViewController(vc, animated: false)
+        navigationController?.pushViewController(vc, animated: true)
     }
+    
+    static func showAlert(title: String, message: String, navigationController: UINavigationController?) {
+         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+         
+         navigationController?.topViewController?.present(alert, animated: true)
+         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+             alert.dismiss(animated: true)
+         }
+         alert.addAction(okAction)
+     }
 }

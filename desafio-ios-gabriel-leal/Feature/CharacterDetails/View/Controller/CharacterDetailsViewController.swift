@@ -40,7 +40,6 @@ class CharacterDetailsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.showNavBar()
-        navigationController?.setNavBarTransparent()
     }
     
     //****************************************************************

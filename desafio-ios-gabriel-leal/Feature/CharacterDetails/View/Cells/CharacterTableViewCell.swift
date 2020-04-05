@@ -53,6 +53,10 @@ extension CharacterTableViewCell {
     @IBAction func expensiveButtonAction(_ sender: Any) {
         viewModel.getComics(success: { comics in
             let viewModel = CharacterExpensiveComicViewModel(model: comics)
+            if comics.count == 0 {
+                Router.showAlert(title: "Ops!", message: "Esse personagem não tem nenhuma HQ", navigationController: self.navigationController)
+                return
+            }
             Router.pushCharacterExpensiveComicViewController(viewModel: viewModel, navigationController: self.navigationController)
         }, failure: { error in
             print(error)
