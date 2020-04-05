@@ -32,6 +32,13 @@ class Router {
          alert.addAction(okAction)
      }
     
+    static func showErrorAlert(title: String, message: String, navigationController: UINavigationController?, alertAction: UIAlertAction) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        navigationController?.topViewController?.present(alert, animated: true)
+        alert.addAction(alertAction)
+    }
+    
     static func showLoading(navigationController: UINavigationController?) -> AnimationView {
         let animationView = AnimationView(name: StaticStrings.kLoadingAnimationName)
         animationView.frame = UIScreen.main.bounds

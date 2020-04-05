@@ -27,4 +27,10 @@ struct StaticStrings {
     
     static let kNoCharacterDescriptionFound = "Esse personagem não tem descrição"
     static let kBackButtonTitle = "Voltar"
+    static let k404 = "Parece que o serviço está offline, ou você está sem internet!"
+    static let k409 = "A API key, Hash ou timestamp estão incorretas!"
+    static let k401 = "Hash ou API Key inválidas!"
+    static let k405 = "Método não permitido!"
+    static let k403 = "Você não tem acesso!"
+    static let kGenericError = "Aconteceu algum erro!"
 }

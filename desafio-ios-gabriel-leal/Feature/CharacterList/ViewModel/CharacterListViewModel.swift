@@ -23,7 +23,7 @@ class CharacterListViewModel {
     
     var reload: (() -> Void)?
     
-    var showError: (() -> Void)?
+    var showError: ((_ error: Error) -> Void)?
     
     var charactersCount: Int {
         return model.count
@@ -43,7 +43,9 @@ class CharacterListViewModel {
     
     init(service: ServicesProtocol) {
         self.service = service
-        fetchCharacterList(offset: 0)
+        fetchCharacterList(offset: 0, failure: { error in
+            self.showError?(error)
+        })
     }
     
     //****************************************************************
@@ -53,18 +55,21 @@ class CharacterListViewModel {
     func fetchNextPage() {
         page += 1
         let offset = page * 20
-        fetchCharacterList(offset: offset)
+        fetchCharacterList(offset: offset, failure: { error in
+            self.showError?(error)
+        })
     }
     
     //****************************************************************
     //MARK: Private Methods
     //****************************************************************
     
-    private func fetchCharacterList(offset: Int) {
+    func fetchCharacterList(offset: Int, failure: @escaping(Error) -> Void) {
         service.getCharacters(offset: offset, success: { characters in
             self.model += characters
         }, failure: { error in
-            self.showError?()
+            failure(error)
+            self.showError?(error)
         })
     }
 }

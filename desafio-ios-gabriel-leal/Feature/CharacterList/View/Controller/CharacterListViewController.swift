@@ -28,7 +28,6 @@ class CharacterListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animationView = Router.showLoading(navigationController: navigationController)
         setDelegates()
         setCollectionViewCellsLayout()
         registerNibs()
@@ -65,11 +64,20 @@ class CharacterListViewController: UIViewController {
     }
     
     private func setupViewModel() {
+        animationView = Router.showLoading(navigationController: navigationController)
         viewModel = CharacterListViewModel(service: Services())
         
         viewModel.reload = {
             self.animationView?.removeFromSuperview()
             self.collectionView.reloadData()
+        }
+        
+        viewModel.showError = { error in
+            self.animationView?.removeFromSuperview()
+            let action = UIAlertAction(title: "Tentar Novamente", style: .default) { _ in
+                self.setupViewModel()
+            }
+            Router.showErrorAlert(title: "Ops!", message: error.getDescription(), navigationController: self.navigationController, alertAction: action)
         }
     }
     
