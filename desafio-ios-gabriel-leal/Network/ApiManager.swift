@@ -22,7 +22,6 @@ class ApiManager {
     //****************************************************************
     
     func getFrom(_ method: String, params: [String: Any]? = nil, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void) {
-        
         Alamofire.request(ApiEndpoint + method, method: .get, parameters: params)
             .validate()
             .response(completionHandler: { response in

@@ -10,5 +10,8 @@ import UIKit
 
 protocol ServicesProtocol: class {
     func getCharacters(offset: Int, success: @escaping ([Character]) -> Void, failure: @escaping (Error) -> Void)
+    
     func getImage(path: String, completion: @escaping(UIImage) -> ())
+    
+    func getCharacterComics(method: String, success: @escaping ([CharacterComicsResult]) -> Void, failure: @escaping (Error) -> Void)
 }

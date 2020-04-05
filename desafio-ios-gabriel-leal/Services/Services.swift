@@ -32,7 +32,15 @@ final class Services: ServicesProtocol {
         }
     }
     
-    
+    func getCharacterComics(method: String, success: @escaping ([CharacterComicsResult]) -> Void, failure: @escaping (Error) -> Void) {
+        let params = ApiKeys.getComicsParams()
+        ApiManager().getFrom(method, params: params, success: { data in
+            let comics = self.unwrapComics(data: data)
+            success(comics)
+        }, failure: { error in
+            failure(error)
+        })
+    }
 }
 
 extension Services {
@@ -43,6 +51,19 @@ extension Services {
             let result = try decoder.decode(CharactersResult.self, from: data)
             let characters = result.data!.characters!
             return characters
+        } catch {
+            print(error)
+        }
+        return []
+    }
+    
+    private func unwrapComics(data: Data) -> [CharacterComicsResult] {
+        do {
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            let result = try decoder.decode(CharacterComics.self, from: data)
+            let comics = result.data?.results ?? []
+            return comics
         } catch {
             print(error)
         }

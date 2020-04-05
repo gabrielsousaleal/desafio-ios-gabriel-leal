@@ -13,10 +13,16 @@ struct StaticStrings {
     static let kApiPrivatKey = "b8748df86e248c08a7bbe6afd2578e9b6c59eb1f"
     static let kApiPublicKey = "66ca5db7c8bd304d93eb6568faa9a88c"
     static let kCharactersMethod = "characters"
+    static let kComicsMethod = "comics"
     static let kSmallImageExtension = "portrait_small"
     static let kMediumImageExtension = "portrait_medium"
     static let kLargeImageExtension = "portrait_xlarge"
     static let kFantasticImageExtension = "portrait_fantastic"
     static let kUncannyImageExtension = "portrait_uncanny"
     static let kIncredibleImageExtension = "portrait_incredible"
+    static let kStandardFantasticImageExtension = "standard_fantastic"
+    static let kStandardAmazingImageExtension = "standard_amazing"
+    
+    static let kNoCharacterDescriptionFound = "Esse personagem não tem descrição"
+    static let kBackButtonTitle = "Voltar"
 }

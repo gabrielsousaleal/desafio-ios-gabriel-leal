@@ -31,4 +31,15 @@ struct ApiKeys {
             ParamKeys.offset : offset
         ]
     }
+    
+    static func getComicsParams() -> [String: Any] {
+        let timeStamp = Int(Date().timeIntervalSince1970)
+        let hash = "\(timeStamp)\(StaticStrings.kApiPrivatKey)\(StaticStrings.kApiPublicKey)"
+        
+        return [
+            ParamKeys.apikey : StaticStrings.kApiPublicKey,
+            ParamKeys.timeStamp : timeStamp,
+            ParamKeys.hash : hash.md5()
+        ]
+    }
 }

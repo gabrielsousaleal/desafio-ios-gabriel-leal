@@ -14,6 +14,9 @@
 		9417B9412437A57600990886 /* CharacterListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9417B93F2437A57600990886 /* CharacterListCollectionViewCell.xib */; };
 		9417B9442437AE9400990886 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417B9432437AE9400990886 /* CharacterListViewModel.swift */; };
 		9417B9472437B09100990886 /* CharacterListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417B9462437B09100990886 /* CharacterListCellViewModel.swift */; };
+		9419AE5024395CD00029087E /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419AE4F24395CD00029087E /* CharacterDetailsViewModel.swift */; };
+		9419AE5524395FB60029087E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419AE5424395FB60029087E /* Router.swift */; };
+		9419AE57243A240A0029087E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419AE56243A240A0029087E /* UINavigationControllerExtension.swift */; };
 		945C594C24369CA100FAECE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C594B24369CA100FAECE5 /* AppDelegate.swift */; };
 		945C594E24369CA100FAECE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C594D24369CA100FAECE5 /* SceneDelegate.swift */; };
 		945C595524369CA400FAECE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945C595424369CA400FAECE5 /* Assets.xcassets */; };
@@ -30,6 +33,12 @@
 		945C598C24375C8800FAECE5 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C598B24375C8800FAECE5 /* Stories.swift */; };
 		945C598E24375CC400FAECE5 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C598D24375CC400FAECE5 /* Thumbnail.swift */; };
 		945C599024375CD600FAECE5 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C598F24375CD600FAECE5 /* URL.swift */; };
+		949B98D7243A440D000E8E89 /* CharacterComics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949B98D6243A440D000E8E89 /* CharacterComics.swift */; };
+		949B98DA243A4748000E8E89 /* CharacterTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949B98D9243A4748000E8E89 /* CharacterTableViewCellViewModel.swift */; };
+		94C5086D24395AA3000FD7A0 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C5086B24395AA3000FD7A0 /* CharacterDetailsViewController.swift */; };
+		94C5086E24395AA3000FD7A0 /* CharacterDetailsXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94C5086C24395AA3000FD7A0 /* CharacterDetailsXib.xib */; };
+		94C5087124395B65000FD7A0 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C5086F24395B65000FD7A0 /* CharacterTableViewCell.swift */; };
+		94C5087224395B65000FD7A0 /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94C5087024395B65000FD7A0 /* CharacterTableViewCell.xib */; };
 		C098AEF15B8FF613FFE69D89 /* Pods_desafio_ios_gabriel_lealTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1111CD01B99350BC5C8EBD4C /* Pods_desafio_ios_gabriel_lealTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +64,9 @@
 		9417B93F2437A57600990886 /* CharacterListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterListCollectionViewCell.xib; sourceTree = "<group>"; };
 		9417B9432437AE9400990886 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 		9417B9462437B09100990886 /* CharacterListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCellViewModel.swift; sourceTree = "<group>"; };
+		9419AE4F24395CD00029087E /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
+		9419AE5424395FB60029087E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9419AE56243A240A0029087E /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		945C594824369CA100FAECE5 /* desafio-ios-gabriel-leal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-ios-gabriel-leal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		945C594B24369CA100FAECE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		945C594D24369CA100FAECE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +87,12 @@
 		945C598B24375C8800FAECE5 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		945C598D24375CC400FAECE5 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
 		945C598F24375CD600FAECE5 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		949B98D6243A440D000E8E89 /* CharacterComics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComics.swift; sourceTree = "<group>"; };
+		949B98D9243A4748000E8E89 /* CharacterTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		94C5086B24395AA3000FD7A0 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
+		94C5086C24395AA3000FD7A0 /* CharacterDetailsXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailsXib.xib; sourceTree = "<group>"; };
+		94C5086F24395B65000FD7A0 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		94C5087024395B65000FD7A0 /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		C0EBDC74865735D7C401002C /* Pods-desafio-ios-gabriel-lealTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-gabriel-lealTests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-ios-gabriel-lealTests/Pods-desafio-ios-gabriel-lealTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				9417B9332437A0BD00990886 /* CharacterList */,
+				94C5086324395A15000FD7A0 /* CharacterDetails */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -121,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				9417B9342437A0C400990886 /* View */,
+				9417B9422437AE7900990886 /* ViewModel */,
+				9417B9392437A4FF00990886 /* Cells */,
 			);
 			path = CharacterList;
 			sourceTree = "<group>";
@@ -128,10 +149,8 @@
 		9417B9342437A0C400990886 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9417B9422437AE7900990886 /* ViewModel */,
-				9417B9392437A4FF00990886 /* Cells */,
-				9417B9352437A0D300990886 /* CharacterListViewController.swift */,
-				9417B9362437A0D300990886 /* CharacterListXib.xib */,
+				94C5086724395A48000FD7A0 /* Controller */,
+				94C5086624395A3A000FD7A0 /* Xibs */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +181,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		9419AE5324395FAD0029087E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9419AE5424395FB60029087E /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		945C593F24369CA100FAECE5 = {
 			isa = PBXGroup;
 			children = (
@@ -185,16 +212,13 @@
 		945C594A24369CA100FAECE5 /* desafio-ios-gabriel-leal */ = {
 			isa = PBXGroup;
 			children = (
+				945C595924369CA400FAECE5 /* Info.plist */,
+				94C5087424395B7B000FD7A0 /* Resources */,
 				9417B9322437A0B300990886 /* Feature */,
 				945C597F2436AAD300FAECE5 /* Models */,
 				945C597C2436A5F600FAECE5 /* Network */,
 				945C59762436A15000FAECE5 /* Commons */,
 				945C596D24369FE400FAECE5 /* Services */,
-				945C594B24369CA100FAECE5 /* AppDelegate.swift */,
-				945C594D24369CA100FAECE5 /* SceneDelegate.swift */,
-				945C595424369CA400FAECE5 /* Assets.xcassets */,
-				945C595624369CA400FAECE5 /* LaunchScreen.storyboard */,
-				945C595924369CA400FAECE5 /* Info.plist */,
 			);
 			path = "desafio-ios-gabriel-leal";
 			sourceTree = "<group>";
@@ -220,6 +244,7 @@
 		945C59762436A15000FAECE5 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				9419AE5324395FAD0029087E /* Router */,
 				945C59792436A19800FAECE5 /* Extensions */,
 				945C59772436A18F00FAECE5 /* StaticStrings.swift */,
 			);
@@ -230,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				945C597A2436A1A900FAECE5 /* StringExtension.swift */,
+				9419AE56243A240A0029087E /* UINavigationControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,8 +277,97 @@
 				945C598B24375C8800FAECE5 /* Stories.swift */,
 				945C598D24375CC400FAECE5 /* Thumbnail.swift */,
 				945C598F24375CD600FAECE5 /* URL.swift */,
+				949B98D6243A440D000E8E89 /* CharacterComics.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		949B98D8243A4736000E8E89 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				949B98D9243A4748000E8E89 /* CharacterTableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94C5086324395A15000FD7A0 /* CharacterDetails */ = {
+			isa = PBXGroup;
+			children = (
+				94C5086524395A2A000FD7A0 /* ViewModel */,
+				94C5086424395A26000FD7A0 /* View */,
+			);
+			path = CharacterDetails;
+			sourceTree = "<group>";
+		};
+		94C5086424395A26000FD7A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94C5087324395B69000FD7A0 /* Cells */,
+				94C5086A24395A82000FD7A0 /* Controller */,
+				94C5086924395A7C000FD7A0 /* Xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94C5086524395A2A000FD7A0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9419AE4F24395CD00029087E /* CharacterDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94C5086624395A3A000FD7A0 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				9417B9362437A0D300990886 /* CharacterListXib.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		94C5086724395A48000FD7A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9417B9352437A0D300990886 /* CharacterListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94C5086924395A7C000FD7A0 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				94C5086C24395AA3000FD7A0 /* CharacterDetailsXib.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		94C5086A24395A82000FD7A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94C5086B24395AA3000FD7A0 /* CharacterDetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94C5087324395B69000FD7A0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				949B98D8243A4736000E8E89 /* ViewModel */,
+				94C5086F24395B65000FD7A0 /* CharacterTableViewCell.swift */,
+				94C5087024395B65000FD7A0 /* CharacterTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		94C5087424395B7B000FD7A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				945C594B24369CA100FAECE5 /* AppDelegate.swift */,
+				945C594D24369CA100FAECE5 /* SceneDelegate.swift */,
+				945C595424369CA400FAECE5 /* Assets.xcassets */,
+				945C595624369CA400FAECE5 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E13A2066FC9503667A431B13 /* Frameworks */ = {
@@ -349,9 +464,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9417B9412437A57600990886 /* CharacterListCollectionViewCell.xib in Resources */,
+				94C5086E24395AA3000FD7A0 /* CharacterDetailsXib.xib in Resources */,
 				945C595824369CA400FAECE5 /* LaunchScreen.storyboard in Resources */,
 				945C595524369CA400FAECE5 /* Assets.xcassets in Resources */,
 				9417B9382437A0D300990886 /* CharacterListXib.xib in Resources */,
+				94C5087224395B65000FD7A0 /* CharacterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,16 +557,23 @@
 				945C59752436A0F600FAECE5 /* ServicesProtocol.swift in Sources */,
 				9417B9472437B09100990886 /* CharacterListCellViewModel.swift in Sources */,
 				9417B9372437A0D300990886 /* CharacterListViewController.swift in Sources */,
+				9419AE57243A240A0029087E /* UINavigationControllerExtension.swift in Sources */,
 				945C596F24369FF100FAECE5 /* APIKeys.swift in Sources */,
+				94C5087124395B65000FD7A0 /* CharacterTableViewCell.swift in Sources */,
 				945C598A24375C6100FAECE5 /* Comics.swift in Sources */,
+				9419AE5524395FB60029087E /* Router.swift in Sources */,
 				945C598E24375CC400FAECE5 /* Thumbnail.swift in Sources */,
 				945C59782436A18F00FAECE5 /* StaticStrings.swift in Sources */,
 				945C597B2436A1A900FAECE5 /* StringExtension.swift in Sources */,
+				9419AE5024395CD00029087E /* CharacterDetailsViewModel.swift in Sources */,
+				949B98D7243A440D000E8E89 /* CharacterComics.swift in Sources */,
 				945C59812436AADF00FAECE5 /* Character.swift in Sources */,
+				949B98DA243A4748000E8E89 /* CharacterTableViewCellViewModel.swift in Sources */,
 				9417B9442437AE9400990886 /* CharacterListViewModel.swift in Sources */,
 				945C598C24375C8800FAECE5 /* Stories.swift in Sources */,
 				945C597E2436A63900FAECE5 /* Services.swift in Sources */,
 				945C594E24369CA100FAECE5 /* SceneDelegate.swift in Sources */,
+				94C5086D24395AA3000FD7A0 /* CharacterDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

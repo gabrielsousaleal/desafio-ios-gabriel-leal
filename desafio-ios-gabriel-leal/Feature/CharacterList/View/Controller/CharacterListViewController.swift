@@ -17,7 +17,6 @@ class CharacterListViewController: UIViewController {
     @IBOutlet private var collectionView: UICollectionView!
     private var viewModel: CharacterListViewModel! = nil
     @IBOutlet var titleView: UIView!
-    
     @IBOutlet var titleViewHeight: NSLayoutConstraint!
     @IBOutlet var titleViewTopConstraint: NSLayoutConstraint!
     //****************************************************************
@@ -30,10 +29,11 @@ class CharacterListViewController: UIViewController {
         setCollectionViewCellsLayout()
         registerNibs()
         setupViewModel()
+        configNavBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.hideNavBar()
     }
     
     //****************************************************************
@@ -77,12 +77,19 @@ class CharacterListViewController: UIViewController {
     }
     
     private func runTitleDownAnimation() {
-       
+        
         UIView.animate(withDuration: 0.5) {
             self.titleView.alpha = 0
             self.titleViewTopConstraint.constant = -self.titleViewHeight.constant
             self.view.layoutIfNeeded()
         }
+    }
+    
+    private func configNavBar() {
+        navigationController?.navigationBar.tintColor = UIColor.red
+        let backItem = UIBarButtonItem()
+        backItem.title = StaticStrings.kBackButtonTitle
+        navigationItem.backBarButtonItem = backItem
     }
 }
 
@@ -108,6 +115,13 @@ extension CharacterListViewController: UICollectionViewDelegate, UICollectionVie
         if indexPath.row == viewModel.charactersCount - 1 {
             viewModel.fetchNextPage()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let index = indexPath.row
+        let character = viewModel.model[index]
+        let viewModel = CharacterDetailsViewModel(model: character, service: Services())
+        Router.pushCharacterDetailsViewController(viewModel: viewModel, navigationController: navigationController)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
