@@ -50,7 +50,7 @@ class CharacterExpensiveCellViewModel {
     private func makeImagePath() -> String {
         guard let thumb: String = model.thumbnail?.path, let thumbExtension = model.thumbnail?.thumbnailExtension else { return String.empty }
         
-        let path = thumb + "/" + StaticStrings.kIncredibleImageExtension + "." + thumbExtension
+        let path = thumb + "/" + StaticStrings.kDetailImageExtension + "." + thumbExtension
         return path
     }
     
