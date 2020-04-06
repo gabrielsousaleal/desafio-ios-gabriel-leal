@@ -15,8 +15,11 @@ final class Services: ServicesProtocol {
     func getCharacters(offset: Int = 0, success: @escaping ([Character]) -> Void, failure: @escaping (Error) -> Void) {
         let params = ApiKeys.getCharactersParams(offset: offset)
         ApiManager().getFrom(StaticStrings.kCharactersMethod, params: params, success: { data in
-            let characters = self.unwrapCharacters(data: data)
-            success(characters)
+            self.unwrapCharacters(data: data, success: { characters in
+                success(characters)
+            }, failure: { error in
+                failure(error)
+            })
         }, failure: { error in
             failure(error)
         })
@@ -35,8 +38,11 @@ final class Services: ServicesProtocol {
     func getCharacterComics(method: String, success: @escaping ([CharacterComicsResult]) -> Void, failure: @escaping (Error) -> Void) {
         let params = ApiKeys.getComicsParams()
         ApiManager().getFrom(method, params: params, success: { data in
-            let comics = self.unwrapComics(data: data)
-            success(comics)
+            self.unwrapComics(data: data, success: { comics in
+                success(comics)
+            }, failure: { error in
+                failure(error)
+            })
         }, failure: { error in
             failure(error)
         })
@@ -44,29 +50,37 @@ final class Services: ServicesProtocol {
 }
 
 extension Services {
-    private func unwrapCharacters(data: Data) -> [Character] {
+    private func unwrapCharacters(data: Data, success: @escaping([Character]) -> Void, failure: @escaping(Error) -> Void) {
         do {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             let result = try decoder.decode(CharactersResult.self, from: data)
-            let characters = result.data!.characters!
-            return characters
+            guard let characters = result.data?.characters else {
+                let errorCode = -1
+                let error = NSError(domain: String.empty, code: errorCode, userInfo: nil)
+                failure(error)
+                return
+            }
+            success(characters)
         } catch {
-            print(error)
+            failure(error)
         }
-        return []
     }
     
-    private func unwrapComics(data: Data) -> [CharacterComicsResult] {
+    private func unwrapComics(data: Data, success: @escaping([CharacterComicsResult]) -> Void, failure: @escaping(Error) -> ()) {
         do {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             let result = try decoder.decode(CharacterComics.self, from: data)
-            let comics = result.data?.results ?? []
-            return comics
+            guard let comics = result.data?.results else {
+                let errorCode = -1
+                let error = NSError(domain: String.empty, code: errorCode, userInfo: nil)
+                failure(error)
+                return
+            }
+            success(comics)
         } catch {
-            print(error)
+            failure(error)
         }
-        return []
     }
 }
