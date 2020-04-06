@@ -62,7 +62,7 @@ extension CharacterTableViewCell {
                     Router.showAlert(title: StaticStrings.kErrorTitle, message: "Esse personagem não tem nenhuma HQ", navigationController: self.navigationController)
                     return
                 }
-                Router.pushCharacterExpensiveComicViewController(viewModel: viewModel, navigationController: self.navigationController)
+                Router.presentCharacterExpensiveComicViewController(viewModel: viewModel, navigationController: self.navigationController)
         }, failure: { error in
             self.animationView?.removeFromSuperview()
             let alert = UIAlertAction(title: StaticStrings.kErrorButton, style: .default) { _ in
