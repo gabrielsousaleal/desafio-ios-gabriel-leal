@@ -11,14 +11,14 @@ import UIKit
 class CharacterExpensiveCellViewModel {
     
     //****************************************************************
-    //MARK: Private Properties
+    // MARK: - Private Properties
     //****************************************************************
     
     private let model: CharacterComicsResult
     private let service: ServicesProtocol
     
     //****************************************************************
-    //MARK: Life Cicle
+    // MARK: - Life Cicle
     //****************************************************************
     
     init(model: CharacterComicsResult, service: ServicesProtocol) {
@@ -27,7 +27,7 @@ class CharacterExpensiveCellViewModel {
     }
     
     //****************************************************************
-    //MARK: Public Properties
+    // MARK: - Public Properties
     //****************************************************************
     
     var title: String {
@@ -44,7 +44,7 @@ class CharacterExpensiveCellViewModel {
     }
     
     //****************************************************************
-    //MARK: Private Methods
+    // MARK: - Private Methods
     //****************************************************************
         
     private func makeImagePath() -> String {

@@ -11,14 +11,14 @@ import UIKit
 class CharacterListCellViewModel {
     
     //****************************************************************
-    //MARK: Private Properties
+    // MARK: - Private Properties
     //****************************************************************
     
     private var model: Character
     private var service: ServicesProtocol
     
     //****************************************************************
-    //MARK: Life Cicle
+    // MARK: - Life Cicle
     //****************************************************************
     
     init(model: Character, service: ServicesProtocol) {
@@ -27,7 +27,7 @@ class CharacterListCellViewModel {
     }
     
     //****************************************************************
-    //MARK: Public Properties
+    // MARK: - Public Properties
     //****************************************************************
     
     var characterName: String {

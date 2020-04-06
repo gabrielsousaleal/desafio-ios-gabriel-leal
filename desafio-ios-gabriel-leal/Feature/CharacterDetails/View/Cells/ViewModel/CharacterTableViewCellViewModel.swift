@@ -11,14 +11,14 @@ import Foundation
 class CharacterTableViewCellViewModel {
     
     //****************************************************************
-    //MARK: Private Properties
+    // MARK: - Private Properties
     //****************************************************************
     
     private var id: String
     private var service: ServicesProtocol
     
     //****************************************************************
-    //MARK: Life Cicle
+    // MARK: - Life Cicle
     //****************************************************************
     
     init(id: String, service: ServicesProtocol) {
@@ -27,7 +27,7 @@ class CharacterTableViewCellViewModel {
     }
     
     //****************************************************************
-      //MARK: Private Methods
+      // MARK: - Private Methods
       //****************************************************************
       
       private func createMethod() -> String {
@@ -36,7 +36,7 @@ class CharacterTableViewCellViewModel {
       }
     
     //****************************************************************
-    //MARK: Public Properties
+    // MARK: - Public Properties
     //****************************************************************
     
     func getComics(success: @escaping([CharacterComicsResult]) -> Void, failure: @escaping(Error) -> Void) {

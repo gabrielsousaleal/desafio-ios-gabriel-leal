@@ -11,7 +11,7 @@ import UIKit
 class CharacterListCollectionViewCell: UICollectionViewCell {
     
     //****************************************************************
-    //MARK: Private Properties
+    // MARK: - Private Properties
     //****************************************************************
     
     @IBOutlet private var imageView: UIImageView!
@@ -20,7 +20,7 @@ class CharacterListCollectionViewCell: UICollectionViewCell {
     private var viewModel: CharacterListCellViewModel!
     
     //****************************************************************
-    //MARK: Life Cicle
+    // MARK: - Life Cicle
     //****************************************************************
     
     override func awakeFromNib() {
@@ -29,7 +29,7 @@ class CharacterListCollectionViewCell: UICollectionViewCell {
     }
     
     //****************************************************************
-    //MARK: Public Methods
+    // MARK: - Public Methods
     //****************************************************************
     
     func setupViewModel(viewModel: CharacterListCellViewModel) {
@@ -38,7 +38,7 @@ class CharacterListCollectionViewCell: UICollectionViewCell {
     }
     
     //****************************************************************
-    //MARK: Private Methods
+    // MARK: - Private Methods
     //****************************************************************
     
     private func config() {

@@ -12,18 +12,19 @@ import Lottie
 class CharacterListViewController: UIViewController {
     
     //****************************************************************
-    // MARK: Private Properties
+    // MARK: - Private Properties
     //****************************************************************
     
     @IBOutlet private var collectionView: UICollectionView!
-    private var viewModel: CharacterListViewModel! = nil
     @IBOutlet var titleView: UIView!
     @IBOutlet var titleViewHeight: NSLayoutConstraint!
     @IBOutlet var titleViewTopConstraint: NSLayoutConstraint!
+    
     private var animationView: AnimationView?
+    private var viewModel: CharacterListViewModel! = nil
     
     //****************************************************************
-    // MARK: Life Cycle
+    // MARK: - Life Cycle
     //****************************************************************
     
     override func viewDidLoad() {
@@ -40,7 +41,7 @@ class CharacterListViewController: UIViewController {
     }
     
     //****************************************************************
-    // MARK: Private Methods
+    // MARK: - Private Methods
     //****************************************************************
     
     private func setDelegates() {
@@ -105,7 +106,7 @@ class CharacterListViewController: UIViewController {
 }
 
 //****************************************************************
-//MARK: Collection VIEW DATA SOURCE
+// MARK: - Collection VIEW DATA SOURCE
 //****************************************************************
 
 extension CharacterListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -149,7 +150,7 @@ extension CharacterListViewController: UICollectionViewDelegate, UICollectionVie
 }
 
 //****************************************************************
-//MARK: StatusBar
+// MARK: - StatusBar
 //****************************************************************
 
 extension CharacterListViewController {

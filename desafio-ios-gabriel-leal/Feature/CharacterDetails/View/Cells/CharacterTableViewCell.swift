@@ -12,7 +12,7 @@ import Lottie
 class CharacterTableViewCell: UITableViewCell {
     
     //****************************************************************
-    //MARK: Private Properties
+    // MARK: - Private Properties
     //****************************************************************
     
     @IBOutlet var characterNameLabel: UILabel!
@@ -26,7 +26,7 @@ class CharacterTableViewCell: UITableViewCell {
     private var animationView: AnimationView?
     
     //****************************************************************
-    //MARK: Life Cicle
+    // MARK: - Life Cicle
     //****************************************************************
     
     override func awakeFromNib() {
@@ -34,7 +34,7 @@ class CharacterTableViewCell: UITableViewCell {
     }
     
     //****************************************************************
-    //MARK: Public Methods
+    // MARK: - Public Methods
     //****************************************************************
     
     func config(characterDescription: String, characterName: String, id: String, service: ServicesProtocol, navigationController: UINavigationController?) {
@@ -48,7 +48,7 @@ class CharacterTableViewCell: UITableViewCell {
 }
 
 //****************************************************************
-//MARK: Xib Actions
+// MARK: - Xib Actions
 //****************************************************************
 
 extension CharacterTableViewCell {

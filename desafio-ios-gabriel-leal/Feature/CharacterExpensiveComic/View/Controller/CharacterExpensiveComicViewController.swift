@@ -11,19 +11,19 @@ import UIKit
 class CharacterExpensiveComicViewController: UIViewController {
     
     //****************************************************************
-    //MARK: Private Properties
+    // MARK: - Private Properties
     //****************************************************************
     
     @IBOutlet var tableView: UITableView!
     
     //****************************************************************
-    //MARK: Public Properties
+    // MARK: - Public Properties
     //****************************************************************
     
     var viewModel: CharacterExpensiveComicViewModel! = nil
     
     //****************************************************************
-    //MARK: Life Cicle
+    // MARK: - Life Cicle
     //****************************************************************
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class CharacterExpensiveComicViewController: UIViewController {
     }
     
     //****************************************************************
-    //MARK: Private Methods
+    // MARK: - Private Methods
     //****************************************************************
     
     private func setDelegates() {
@@ -48,7 +48,7 @@ class CharacterExpensiveComicViewController: UIViewController {
 }
 
 //****************************************************************
-//MARK: TableView DataSource/Delegate
+// MARK: - TableView DataSource/Delegate
 //****************************************************************
 
 extension CharacterExpensiveComicViewController: UITableViewDelegate, UITableViewDataSource {
@@ -64,7 +64,7 @@ extension CharacterExpensiveComicViewController: UITableViewDelegate, UITableVie
 }
 
 //****************************************************************
-//MARK: StatusBar
+// MARK: - StatusBar
 //****************************************************************
 
 extension CharacterExpensiveComicViewController {

@@ -58,7 +58,7 @@ class CharacterDetailsViewController: UIViewController {
 }
 
 //****************************************************************
-//MARK: TableView DataSource / Delegate
+// MARK: - TableView DataSource / Delegate
 //****************************************************************
 
 extension CharacterDetailsViewController: UITableViewDelegate, UITableViewDataSource {

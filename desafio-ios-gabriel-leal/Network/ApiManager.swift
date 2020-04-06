@@ -12,13 +12,13 @@ import Alamofire
 class ApiManager {
     
     //****************************************************************
-    // MARK: Private Properties
+    // MARK: - Private Properties
     //****************************************************************
     
     private let ApiEndpoint: String = StaticStrings.kApiEndpoint
     
     //****************************************************************
-    // MARK: Public Methods
+    // MARK: - Public Methods
     //****************************************************************
     
     func getFrom(_ method: String, params: [String: Any]? = nil, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void) {

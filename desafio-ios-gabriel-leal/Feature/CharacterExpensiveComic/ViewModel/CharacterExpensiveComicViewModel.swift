@@ -11,13 +11,13 @@ import UIKit
 class CharacterExpensiveComicViewModel {
     
     //****************************************************************
-    //MARK: Private Properties
+    // MARK: - Private Properties
     //****************************************************************
     
     private let model: [CharacterComicsResult]
     
     //****************************************************************
-    //MARK: Life Cicle
+    // MARK: - Life Cicle
     //****************************************************************
     
     init(model: [CharacterComicsResult]) {
@@ -25,7 +25,7 @@ class CharacterExpensiveComicViewModel {
     }
     
     //****************************************************************
-    //MARK: Public Properties
+    // MARK: - Public Properties
     //****************************************************************
     
     var expensiveComic: CharacterComicsResult {
@@ -33,7 +33,7 @@ class CharacterExpensiveComicViewModel {
     }
     
     //****************************************************************
-    //MARK: Private Methods
+    // MARK: - Private Methods
     //****************************************************************
     
     private func getExpensiveComic() -> CharacterComicsResult {

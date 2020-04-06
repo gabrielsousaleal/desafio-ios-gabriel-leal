@@ -11,14 +11,14 @@ import Foundation
 class CharacterListViewModel {
     
     //****************************************************************
-    //MARK: Private Properties
+    // MARK: - Private Properties
     //****************************************************************
     
     private let service: ServicesProtocol
     private var page = 0
     
     //****************************************************************
-    //MARK: Public Properties
+    // MARK: - Public Properties
     //****************************************************************
     
     var reload: (() -> Void)?
@@ -38,7 +38,7 @@ class CharacterListViewModel {
     }
     
     //****************************************************************
-    //MARK: Life Cicle
+    // MARK: - Life Cicle
     //****************************************************************
     
     init(service: ServicesProtocol) {
@@ -46,7 +46,7 @@ class CharacterListViewModel {
     }
     
     //****************************************************************
-    //MARK: Public Methods
+    // MARK: - Public Methods
     //****************************************************************
     
     func fetchNextPage() {
@@ -58,7 +58,7 @@ class CharacterListViewModel {
     }
     
     //****************************************************************
-    //MARK: Private Methods
+    // MARK: - Private Methods
     //****************************************************************
     
     func fetchCharacterList(offset: Int, failure: @escaping(Error) -> Void) {

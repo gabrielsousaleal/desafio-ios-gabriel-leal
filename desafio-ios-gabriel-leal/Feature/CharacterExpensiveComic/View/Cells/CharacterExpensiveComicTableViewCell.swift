@@ -11,7 +11,7 @@ import UIKit
 class CharacterExpensiveComicTableViewCell: UITableViewCell {
     
     //****************************************************************
-    //MARK: Private Properties
+    // MARK: - Private Properties
     //****************************************************************
     
     @IBOutlet var titleLabel: UILabel!
@@ -22,7 +22,7 @@ class CharacterExpensiveComicTableViewCell: UITableViewCell {
     private var viewModel: CharacterExpensiveCellViewModel! = nil
     
     //****************************************************************
-    //MARK: Life Cicle
+    // MARK: - Life Cicle
     //****************************************************************
     
     override func awakeFromNib() {
@@ -31,7 +31,7 @@ class CharacterExpensiveComicTableViewCell: UITableViewCell {
     }
     
     //****************************************************************
-    //MARK: Public Methods
+    // MARK: - Public Methods
     //****************************************************************
 
     func setupViewModel(model: CharacterComicsResult, service: ServicesProtocol) {
@@ -40,7 +40,7 @@ class CharacterExpensiveComicTableViewCell: UITableViewCell {
     }
     
     //****************************************************************
-    //MARK: Private Methods
+    // MARK: - Private Methods
     //****************************************************************
     
     private func config() {
