@@ -66,7 +66,7 @@ extension CharacterTableViewCell {
         }, failure: { error in
             self.animationView?.removeFromSuperview()
             let alert = UIAlertAction(title: StaticStrings.kErrorButton, style: .default) { _ in
-                self.navigationController?.popViewController(animated: true)
+                return
             }
             Router.showErrorAlert(title: StaticStrings.kErrorTitle, message: error.getDescription(), navigationController: self.navigationController, alertAction: alert)
         })
