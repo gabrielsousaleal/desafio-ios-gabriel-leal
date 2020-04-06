@@ -29,6 +29,7 @@ struct StaticStrings {
     static let kBackButtonTitle = "Voltar"
     static let kErrorTitle = "Ops!"
     static let kErrorButton = "Tentar Novamente"
+    static let k1000 = "Erro no parse do JSON"
     static let k1009 = "Você está sem internet!"
     static let k404 = "Parece que o serviço está offline!"
     static let k409 = "A API key, Hash ou timestamp estão incorretas!"

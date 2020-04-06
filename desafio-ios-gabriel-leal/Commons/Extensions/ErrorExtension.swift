@@ -14,6 +14,8 @@ extension Error {
         let errorCode = nsError.code
         
         switch errorCode {
+        case 1000:
+            return StaticStrings.k1000
         case 1009:
             return StaticStrings.k1009
         case 404:

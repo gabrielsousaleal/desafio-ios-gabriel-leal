@@ -10,9 +10,12 @@ import UIKit
 
 class ServicesMock: ServicesProtocol {
     func getCharacters(offset: Int, success: @escaping ([Character]) -> Void, failure: @escaping (Error) -> Void) {
-        getJSONData(fileName: "", success: { data in
-            let characters = self.unwrapCharacters(data: data)
-            success(characters)
+        getJSONData(fileName: "characters", success: { data in
+            self.unwrapCharacters(data: data, success: { characters in
+                success(characters)
+            }, failure: { error in
+                failure(error)
+            })
         }, failure: { error in
             failure(error)
         })
@@ -25,8 +28,11 @@ class ServicesMock: ServicesProtocol {
     
     func getCharacterComics(method: String, success: @escaping ([CharacterComicsResult]) -> Void, failure: @escaping (Error) -> Void) {
         getJSONData(fileName: "comics", success: { data in
-            let characters = self.unwrapComics(data: data)
-            success(characters)
+            self.unwrapComics(data: data, success: { comics in
+                success(comics)
+            }, failure: { error in
+                failure(error)
+            })
         }, failure: { error in
             failure(error)
         })
@@ -34,31 +40,39 @@ class ServicesMock: ServicesProtocol {
 }
 
 extension ServicesMock {
-    private func unwrapCharacters(data: Data) -> [Character] {
-        do {
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .iso8601
-            let result = try decoder.decode(CharactersResult.self, from: data)
-            let characters = result.data!.characters!
-            return characters
-        } catch {
-            print(error)
-        }
-        return []
-    }
-    
-    private func unwrapComics(data: Data) -> [CharacterComicsResult] {
-        do {
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .iso8601
-            let result = try decoder.decode(CharacterComics.self, from: data)
-            let comics = result.data?.results ?? []
-            return comics
-        } catch {
-            print(error)
-        }
-        return []
-    }
+     private func unwrapCharacters(data: Data, success: @escaping([Character]) -> Void, failure: @escaping(Error) -> Void) {
+           do {
+               let decoder = JSONDecoder()
+               decoder.dateDecodingStrategy = .iso8601
+               let result = try decoder.decode(CharactersResult.self, from: data)
+               guard let characters = result.data?.characters else {
+                   let errorCode = -1
+                   let error = NSError(domain: String.empty, code: errorCode, userInfo: nil)
+                   failure(error)
+                   return
+               }
+               success(characters)
+           } catch {
+               failure(error)
+           }
+       }
+       
+       private func unwrapComics(data: Data, success: @escaping([CharacterComicsResult]) -> Void, failure: @escaping(Error) -> ()) {
+           do {
+               let decoder = JSONDecoder()
+               decoder.dateDecodingStrategy = .iso8601
+               let result = try decoder.decode(CharacterComics.self, from: data)
+               guard let comics = result.data?.results else {
+                   let errorCode = -1
+                   let error = NSError(domain: String.empty, code: errorCode, userInfo: nil)
+                   failure(error)
+                   return
+               }
+               success(comics)
+           } catch {
+               failure(error)
+           }
+       }
     
     private func getJSONData(fileName: String, success: @escaping(Data) -> Void, failure: @escaping(Error) -> ()) {
         if let path = Bundle.main.path(forResource: fileName, ofType: "json") {

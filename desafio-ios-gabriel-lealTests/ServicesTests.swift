@@ -29,11 +29,7 @@ class ServicesTests: XCTestCase {
         service.getCharacters(offset: 0, success: { characters in
             XCTAssertNotNil(characters)
         }, failure: { error in
-            XCTFail()
+            XCTAssertNil(error, error.getDescription())
         })
-    }
-    
-    func testExample() {
-        
     }
 }

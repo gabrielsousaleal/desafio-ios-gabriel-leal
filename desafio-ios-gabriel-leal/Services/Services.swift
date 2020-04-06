@@ -56,7 +56,7 @@ extension Services {
             decoder.dateDecodingStrategy = .iso8601
             let result = try decoder.decode(CharactersResult.self, from: data)
             guard let characters = result.data?.characters else {
-                let errorCode = -1
+                let errorCode = 1000
                 let error = NSError(domain: String.empty, code: errorCode, userInfo: nil)
                 failure(error)
                 return
@@ -73,7 +73,7 @@ extension Services {
             decoder.dateDecodingStrategy = .iso8601
             let result = try decoder.decode(CharacterComics.self, from: data)
             guard let comics = result.data?.results else {
-                let errorCode = -1
+                let errorCode = 1000
                 let error = NSError(domain: String.empty, code: errorCode, userInfo: nil)
                 failure(error)
                 return
