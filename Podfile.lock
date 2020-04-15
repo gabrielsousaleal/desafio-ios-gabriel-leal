@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (4.9.0)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
+  - CryptoSwift (0.7.1)
+  - lottie-ios (3.1.3)
+  - SwiftLint (0.39.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `swift4`)
+  - lottie-ios
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - lottie-ios
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  CryptoSwift:
+    :branch: swift4
+    :git: https://github.com/krzyzanowskim/CryptoSwift
+
+CHECKOUT OPTIONS:
+  CryptoSwift:
+    :commit: 25241ab5203e828906bbf70208b07640d2d84c69
+    :git: https://github.com/krzyzanowskim/CryptoSwift
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  CryptoSwift: 03d1267938034bbee88fce1bd78720e943bdbcf8
+  lottie-ios: 496ac5cea1bbf1a7bd1f1f472f3232eb1b8d744b
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+
+PODFILE CHECKSUM: 6ace73e524e5a3075f0dfa56991593e92ba0ca8b
+
+COCOAPODS: 1.8.3
